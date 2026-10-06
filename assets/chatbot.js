@@ -90,6 +90,7 @@
     return r.map(function (x) { return fmtTime(x[0]) + "–" + fmtTime(x[1]); }).join(" and ");
   };
   Bot.prototype.openStatus = function () {
+    if (!this.c.hours) return "";
     var n = nowIn(this.tz), r = (this.c.hours || {})[n.day] || [], i;
     for (i = 0; i < r.length; i++) if (n.min >= toMin(r[i][0]) && n.min < toMin(r[i][1])) return "We're open now, until " + fmtTime(r[i][1]) + " today.";
     for (i = 0; i < r.length; i++) if (n.min < toMin(r[i][0])) return "We're closed right now. We open at " + fmtTime(r[i][0]) + " today.";
@@ -115,6 +116,9 @@
   Bot.prototype.reply = function (text) {
     var c = this.c, m = norm(text), toks = tokens(text), self = this;
     if (!m) return { text: "Type a question, or tap one of the buttons below." };
+    if (c.booking && (m === norm(c.booking.cta || "") || m === norm(c.booking.title || ""))) {
+      return { text: c.booking.intro || "Fill in the short form and we'll get back to you.", action: "booking" };
+    }
     var b = {}; Object.keys(BUILTIN).forEach(function (k) { b[k] = score(m, toks, BUILTIN[k]); });
     var day = null; toks.forEach(function (t) { if (DAY_WORDS[t]) day = DAY_WORDS[t]; });
     if (/\btoday\b/.test(m)) day = nowIn(this.tz).day;
@@ -143,6 +147,9 @@
     }
     if (faq && faqS >= 2.5 && (faqS >= builtinS - 0.5 || (faqS >= 3 && (builtinTop === "booking" || builtinTop === "contact")))) {
       return { text: faq.a, chips: faq.chips };
+    }
+    if ((b.hours >= 1.5 || (day && builtinS < 3)) && !c.hours) {
+      return { text: c.hoursNote || "Please get in touch to check availability.", chips: [c.booking ? (c.booking.cta || "Get in touch") : null].filter(Boolean) };
     }
     if (b.hours >= 1.5 || (day && builtinS < 3)) {
       var out = [];
@@ -280,7 +287,7 @@
         self.say("Thanks, " + data.name + "! Your email app should now open with the request filled in – just press send. " + (bk.after || "We'll confirm as soon as we can."), "bot");
         w.location.href = href;
       } else {
-        self.say((c.demo ? "Demo only – nothing was sent. On a real site this request goes straight to the business (by email or a free form service).\n\n" : "Thanks! ") +
+        self.say((c.demo ? (c.demoNote || "Demo only – nothing was sent. On a real site this request goes straight to the business (by email or a free form service).") + "\n\n" : "Thanks! ") +
           "Request summary:\n" + lines.join("\n") + "\n\n" + (bk.after || "We'll confirm by message as soon as we can."), "bot");
       }
       self.setChips(c.suggestions);
@@ -294,12 +301,13 @@
     var c = bot.c;
     Array.prototype.forEach.call(d.querySelectorAll("[data-tlc-hours]"), function (t) {
       t.innerHTML = ""; var today = nowIn(bot.tz).day;
+      if (!c.hours) { var r = el("tr"); r.appendChild(el("td", null, c.hoursNote || "Hours to be confirmed.")); t.appendChild(r); return; }
       ["mon", "tue", "wed", "thu", "fri", "sat", "sun"].forEach(function (k) {
         var tr = el("tr"); if (k === today) tr.className = "is-today";
         tr.appendChild(el("th", null, DAY_NAMES[k])); tr.appendChild(el("td", null, bot.dayText(k))); t.appendChild(tr);
       });
     });
-    Array.prototype.forEach.call(d.querySelectorAll("[data-tlc-status]"), function (t) { t.textContent = bot.openStatus(); });
+    Array.prototype.forEach.call(d.querySelectorAll("[data-tlc-status]"), function (t) { if (c.hours) { t.textContent = bot.openStatus(); t.classList.toggle("is-closed", /closed/.test(t.textContent)); } else t.hidden = true; });
     Array.prototype.forEach.call(d.querySelectorAll("[data-tlc-faqs]"), function (t) {
       t.innerHTML = "";
       (c.faqs || []).filter(function (f) { return f.onPage !== false; }).forEach(function (f) {

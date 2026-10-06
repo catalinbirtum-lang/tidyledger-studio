@@ -77,3 +77,4 @@ table.hours tr.is-today th,table.hours tr.is-today td{color:var(--accent);font-w
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 .card .btn.ghost,.panel .btn.ghost{color:var(--ink);border-color:var(--line)}.card .btn.ghost:hover{border-color:var(--accent);color:var(--price,var(--accent))}
 .nav a.btn{color:var(--accent-text)}.nav a.btn:hover{color:var(--accent-text)}
+.status.is-closed::before{background:#9aa5b1;box-shadow:0 0 0 3px rgba(154,165,177,.25)}
