@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halyard Plumbing &amp; Heating (Demo) – local plumber for repairs, radiators and boiler servicing</title><meta name="description" content="Demo website for an invented plumbing and heating firm, with a working chatbot for prices, areas covered and quote requests.">
+<meta name="theme-color" content="#f26b1d"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23f26b1d'/%3E%3C/svg%3E"><link rel="canonical" href="https://catalinbirtum-lang.github.io/tidyledger-studio/demos/plumber/">
+<meta property="og:title" content="Halyard Plumbing &amp; Heating (Demo) – local plumber for repairs, radiators and boiler servicing"><meta property="og:description" content="Demo website for an invented plumbing and heating firm, with a working chatbot for prices, areas covered and quote requests."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../../assets/demo.css"><link rel="stylesheet" href="../../assets/chatbot.css">
+<style>:root{--bg:#ffffff;--ink:#0f1f33;--muted:#53627a;--line:#e1e7ef;--accent:#f26b1d;--accent-text:#ffffff;--alt-bg:#f2f6fb;
+  --font-head:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --hero-bg:linear-gradient(135deg,#0f2a4a 0%,#123a66 55%,#1a4d85 100%);--hero-ink:#fff;--ghost:#fff;--eyebrow:#ffb37d;--pill-bg:rgba(255,255,255,.12);
+  --strip-bg:#0f1f33;--strip-ink:#fff;--band-bg:#0f2a4a;--radius:14px;--radius-btn:10px;--price:#0f2a4a;--foot-bg:#0b1726}</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>Demo site</strong> for an invented business, built by Tidy Ledger Studio. Try the chat button. <a href="../../">See packages &amp; prices &rarr;</a></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="#top"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="10" fill="#0f2a4a"/><path d="M20 8c5 7 8 11 8 15a8 8 0 0 1-16 0c0-4 3-8 8-15z" fill="#f26b1d"/><path d="M16.5 24a3.5 3.5 0 0 0 3.5 3.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/></svg><span>Halyard Plumbing &amp; Heating<small>Plumbing &amp; Heating · Demo</small></span></a>
+<nav class="nav" aria-label="Main"><a href="#services">Prices</a><a href="#hours">Hours</a><a href="#faq">FAQ</a><a href="#find">Areas</a>
+<button class="btn sm" type="button" data-chat-book="">Request a quote</button></nav></div></header>
+<main id="main">
+<section class="hero" id="top"><div class="wrap"><div>
+<span class="eyebrow">Plumbing &amp; Heating · Greater Manchester · Demo</span><h1>Local plumbers who turn up when they say.</h1><p class="lead">Leaks, radiators, boiler servicing and bathroom installs across south Manchester. Clear &#x27;from&#x27; prices, free quotes, and a chat assistant that can take your request at 11pm.</p>
+<div class="ctas"><button class="btn" type="button" data-chat-book="">Request a quote</button><a class="btn ghost" href="#services">Common jobs &amp; starting prices</a></div>
+<span class="status" data-tlc-status>Opening hours below</span></div>
+<div class="hero-art"><svg viewBox="0 0 500 450" role="img" aria-label="Illustration: house with pipes, a water drop, a wrench and a chat bubble">
+<circle cx="260" cy="190" r="175" fill="#ffffff14"/>
+<path d="M120 200 250 95l130 105v130H120z" fill="#fff"/><path d="M100 210 250 85l150 125" stroke="#f26b1d" stroke-width="16" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="225" y="250" width="50" height="80" rx="6" fill="#123a66"/><rect x="150" y="225" width="50" height="45" rx="6" fill="#cfe1f5"/><rect x="300" y="225" width="50" height="45" rx="6" fill="#cfe1f5"/>
+<path d="M60 330h80v-40h40" stroke="#9fb6d1" stroke-width="12" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="140" cy="330" r="10" fill="#f26b1d"/>
+<path d="M410 60c18 26 28 41 28 55a28 28 0 0 1-56 0c0-14 10-29 28-55z" fill="#5fb3ff"/>
+<g transform="translate(395 190) rotate(40)"><rect x="-9" y="-10" width="18" height="110" rx="9" fill="#f26b1d"/><path d="M-28-40a30 30 0 1 0 56 0l-14 0 0 18-28 0 0-18z" fill="#f26b1d"/></g>
+<g font-family="system-ui,Segoe UI,Arial" font-size="15">
+<rect x="250" y="310" width="230" height="44" rx="14" fill="#f26b1d"/><text x="266" y="338" fill="#fff">Do you cover Sale?</text>
+<rect x="190" y="366" width="290" height="62" rx="14" fill="#fff" stroke="#00000018"/><text x="206" y="392" fill="#222">Yes – Sale is in our area.</text><text x="206" y="414" fill="#222">Shall I take a quote request?</text></g></svg></div></div></section>
+<div class="strip"><div class="wrap"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Workmanship guarantee</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M16 6.5A4 4 0 0 0 9 9v9M6 13h8M6 18h11"/></svg><span>Free, no-obligation quotes</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Emergency call-outs 7am–10pm</span></div></div></div>
+<section class="block" id="services"><div class="wrap"><div class="sec-head"><h2>Common jobs &amp; starting prices</h2><p>Every job is quoted before work starts. &#x27;From&#x27; prices include VAT; parts are extra and agreed with you first.</p></div>
+<div class="cards"><article class="card"><h3>Call-out &amp; first hour</h3><div class="price">from £75</div><p>Diagnosis and repair of most everyday problems.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Call-out &amp; first hour">Request a quote</button></article>
+<article class="card"><h3>Leaking tap or toilet repair</h3><div class="price">from £85</div><p>Washers, valves, cisterns and flush mechanisms.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Leaking tap or toilet repair">Request a quote</button></article>
+<article class="card"><h3>Radiator replacement</h3><div class="price">from £180</div><p>Swap like-for-like, including drain down and refill.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Radiator replacement">Request a quote</button></article>
+<article class="card"><h3>Boiler service</h3><div class="price">from £80</div><p>Annual safety and efficiency service with a written report.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Boiler service">Request a quote</button></article>
+<article class="card"><h3>Power flush</h3><div class="price">from £350</div><p>Clears sludge so radiators heat evenly again.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Power flush">Request a quote</button></article>
+<article class="card"><h3>Emergency call-out</h3><div class="price">from £120</div><p>7am–10pm, 7 days, for leaks and no heat/hot water.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Emergency call-out">Request a quote</button></article>
+<article class="card"><h3>Bathroom installation</h3><div class="price">free quote</div><p>Full refits or just a new shower – we visit and quote for free.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Bathroom installation">Request a quote</button></article></div></div></section>
+<section class="block alt" id="about"><div class="wrap two"><div class="sec-head"><h2>How we work</h2><p>Sample copy for a demo business – your real details go here.</p></div><ul class="ticks"><li>We give you an arrival window and text when the engineer is on the way.</li><li>A fixed quote before any work starts – no surprise extras.</li><li>Dust sheets down, mess cleared up, old parts taken away.</li><li>Boiler and gas work only by Gas Safe registered engineers (a real site shows each engineer&#x27;s Gas Safe ID here).</li></ul></div></section>
+<section class="block" id="hours"><div class="wrap two">
+<div class="panel"><h3>Opening hours</h3><table class="hours"><tbody data-tlc-hours><tr><td>Loading…</td></tr></tbody></table><p class="meta" style="color:var(--muted);font-size:14px;margin:12px 0 0">Emergency call-outs (leaks, no heating, no hot water) run 7 days a week, 7am–10pm, at the emergency rate.</p></div>
+<div class="panel" id="find"><h3>Areas we cover</h3><p style="margin-top:0;color:var(--muted)">Areas covered (demo): Stockport, Didsbury, Chorlton, Sale, Altrincham, Cheadle and surrounding areas.</p><div class="map"><svg viewBox="0 0 600 300" role="img" aria-label="Stylised demo map (not a real location)"><rect width="600" height="300" fill="#dfe8f3"/>
+<path d="M0 210C120 190 200 240 320 215S520 160 600 180V300H0z" fill="#8fc1ec" opacity=".55"/>
+<g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90H610M180-10V310M420-10 380 310M0 160C200 150 300 120 610 140"/></g>
+<g stroke="#fff" stroke-width="6" fill="none" opacity=".8"><path d="M60-10V310M300-10V310M520-10V310M-10 40H610M-10 250H610"/></g>
+<g transform="translate(300 128)"><path d="M0 0c-18-22-26-34-26-46a26 26 0 0 1 52 0c0 12-8 24-26 46z" fill="#f26b1d"/><circle cy="-46" r="9" fill="#fff"/></g>
+<rect x="16" y="16" width="150" height="30" rx="8" fill="#fff"/><text x="28" y="36" font-family="system-ui,Arial" font-size="14" fill="#333">Demo map – not real</text></svg></div></div>
+</div></section>
+<section class="block alt faq" id="faq"><div class="wrap"><div class="sec-head"><h2>Questions</h2><p>The same answers the chat assistant gives – written once, shown in both places.</p></div>
+<div data-tlc-faqs></div>
+<div class="cta-band" style="margin-top:34px"><div><h2>Still got a question?</h2><p>Our assistant answers instantly – day or night.</p><div class="chips-row"><button type="button" data-chat-ask="Prices">Prices</button><button type="button" data-chat-ask="Do you cover my area?">Do you cover my area?</button><button type="button" data-chat-ask="Emergency call-out">Emergency call-out</button><button type="button" data-chat-ask="Where are you?">Where are you?</button></div></div>
+<button class="btn" type="button" data-chat-book="">Request a quote</button></div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<p class="demo-note"><strong>Demo site by Tidy Ledger Studio.</strong> Halyard Plumbing &amp; Heating is an invented business: names, address, prices and details are samples, not a real company. Want a site and chatbot like this for your business? <a href="../../">See the packages</a>.</p>
+<p>&copy; 2026 Tidy Ledger Studio (sample content). No cookies. Visits are counted anonymously (GoatCounter, EU-hosted; no IP address stored). <a href="#" data-tl-optout role="button" tabindex="0">Don't count my visits</a></p>
+<p><a href="../../">Studio home</a> · <a href="../barber/">Barber demo</a> · <a href="../plumber/">Plumber demo</a> · <a href="../cafe/">Café demo</a></p>
+</div></footer>
+<script src="../../assets/chatbot.js"></script>
+<script>TLChat.init({
+ "business": "Halyard Plumbing & Heating",
+ "botName": "Halyard assistant",
+ "demo": true,
+ "accent": "#f26b1d",
+ "launcherLabel": "Get a quote",
+ "greeting": "Hi! I'm the Halyard assistant (demo). I can give starting prices, tell you if we cover your area, or take a quote or call-out request.",
+ "suggestions": [
+  "Prices",
+  "Do you cover my area?",
+  "Emergency call-out",
+  "Request a quote"
+ ],
+ "hours": {
+  "mon": [
+   [
+    "08:00",
+    "18:00"
+   ]
+  ],
+  "tue": [
+   [
+    "08:00",
+    "18:00"
+   ]
+  ],
+  "wed": [
+   [
+    "08:00",
+    "18:00"
+   ]
+  ],
+  "thu": [
+   [
+    "08:00",
+    "18:00"
+   ]
+  ],
+  "fri": [
+   [
+    "08:00",
+    "18:00"
+   ]
+  ],
+  "sat": [
+   [
+    "09:00",
+    "13:00"
+   ]
+  ],
+  "sun": []
+ },
+ "hoursNote": "Emergency call-outs (leaks, no heating, no hot water) run 7 days a week, 7am–10pm, at the emergency rate.",
+ "pricesIntro": "Starting prices (including VAT, parts extra and agreed first):",
+ "pricesNote": "Every job gets a fixed quote before work starts.",
+ "services": [
+  {
+   "name": "Call-out & first hour",
+   "price": "from £75",
+   "keywords": [
+    "call out",
+    "callout",
+    "hourly",
+    "hour rate",
+    "labour",
+    "per hour"
+   ],
+   "blurb": "Diagnosis and repair of most everyday problems."
+  },
+  {
+   "name": "Leaking tap or toilet repair",
+   "price": "from £85",
+   "keywords": [
+    "leak",
+    "leaking",
+    "drip",
+    "dripping",
+    "tap",
+    "toilet",
+    "cistern",
+    "flush",
+    "washer"
+   ],
+   "blurb": "Washers, valves, cisterns and flush mechanisms."
+  },
+  {
+   "name": "Radiator replacement",
+   "price": "from £180",
+   "keywords": [
+    "radiator",
+    "rad",
+    "cold radiator",
+    "bleed",
+    "valve",
+    "trv"
+   ],
+   "blurb": "Swap like-for-like, including drain down and refill."
+  },
+  {
+   "name": "Boiler service",
+   "price": "from £80",
+   "keywords": [
+    "boiler",
+    "service",
+    "annual service",
+    "boiler check",
+    "combi"
+   ],
+   "blurb": "Annual safety and efficiency service with a written report."
+  },
+  {
+   "name": "Power flush",
+   "price": "from £350",
+   "keywords": [
+    "power flush",
+    "powerflush",
+    "sludge",
+    "flush system",
+    "cold spots"
+   ],
+   "blurb": "Clears sludge so radiators heat evenly again."
+  },
+  {
+   "name": "Emergency call-out",
+   "price": "from £120",
+   "keywords": [
+    "emergency",
+    "urgent",
+    "burst",
+    "burst pipe",
+    "flood",
+    "flooding",
+    "no heating",
+    "no hot water",
+    "out of hours",
+    "asap"
+   ],
+   "blurb": "7am–10pm, 7 days, for leaks and no heat/hot water."
+  },
+  {
+   "name": "Bathroom installation",
+   "price": "free quote",
+   "keywords": [
+    "bathroom",
+    "install",
+    "installation",
+    "shower",
+    "bath",
+    "refit",
+    "new bathroom",
+    "en suite",
+    "ensuite"
+   ],
+   "blurb": "Full refits or just a new shower – we visit and quote for free."
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Which areas do you cover?",
+   "keywords": [
+    "area",
+    "areas",
+    "cover",
+    "come to",
+    "near me",
+    "stockport",
+    "didsbury",
+    "chorlton",
+    "sale",
+    "altrincham",
+    "cheadle",
+    "manchester",
+    "postcode",
+    "travel"
+   ],
+   "a": "We cover Stockport, Didsbury, Chorlton, Sale, Altrincham, Cheadle and nearby areas of south Manchester (demo list). Not sure? Send a request with your postcode and we'll confirm."
+  },
+  {
+   "q": "Are you Gas Safe registered?",
+   "keywords": [
+    "gas safe",
+    "gas",
+    "registered",
+    "corgi",
+    "qualified",
+    "certified",
+    "accredited"
+   ],
+   "a": "Demo answer: on a real site this shows the business's Gas Safe registration number and links to the Gas Safe Register, so customers can check it themselves."
+  },
+  {
+   "q": "Are quotes free?",
+   "keywords": [
+    "free quote",
+    "quote free",
+    "estimate",
+    "charge for quote",
+    "how much quote"
+   ],
+   "a": "Yes – quotes are free with no obligation. Simple jobs can be quoted from photos; bigger jobs we visit first."
+  },
+  {
+   "q": "How quickly can you come out?",
+   "keywords": [
+    "how soon",
+    "how quickly",
+    "today",
+    "tomorrow",
+    "this week",
+    "wait",
+    "fast",
+    "quick"
+   ],
+   "a": "Emergencies (leaks, no heating or hot water) are usually attended the same day between 7am and 10pm. Routine jobs are normally booked within 2–4 working days."
+  },
+  {
+   "q": "How can I pay?",
+   "keywords": [
+    "pay",
+    "payment",
+    "card",
+    "cash",
+    "bank transfer",
+    "invoice",
+    "deposit"
+   ],
+   "a": "Card, bank transfer or cash on completion. Larger installs need a deposit, which is shown on your quote."
+  },
+  {
+   "q": "Do you guarantee your work?",
+   "keywords": [
+    "guarantee",
+    "warranty",
+    "comeback",
+    "goes wrong",
+    "insured",
+    "insurance"
+   ],
+   "a": "Demo answer: a real site states the firm's actual workmanship guarantee and insurance here, in plain words."
+  },
+  {
+   "q": "Do you clean up afterwards?",
+   "keywords": [
+    "mess",
+    "clean",
+    "tidy",
+    "dust",
+    "rubbish",
+    "old parts"
+   ],
+   "a": "Always – dust sheets down, mess cleared and old parts taken away.",
+   "onPage": false
+  }
+ ],
+ "locationText": "We're a mobile team covering Stockport, Didsbury, Chorlton, Sale, Altrincham, Cheadle and nearby (demo areas). Send your postcode in a quote request and we'll confirm.",
+ "contactText": "The quickest way is a quote or call-out request here in the chat – the office replies by phone or email. For a burst pipe, turn off the stopcock (usually under the kitchen sink) first.",
+ "booking": {
+  "cta": "Request a quote",
+  "title": "Quote / call-out request",
+  "intro": "No problem – tell us what's happening and the office will call or email to arrange a time.",
+  "optionLabel": "Job type",
+  "extraField": {
+   "label": "Postcode",
+   "type": "text",
+   "required": true
+  },
+  "dateLabel": "Preferred date",
+  "timeOptions": [
+   "Any time",
+   "Morning (8–12)",
+   "Afternoon (12–5)",
+   "Evening (emergency only)"
+  ],
+  "notesLabel": "What's the problem? (photos can be sent later)",
+  "submitLabel": "Send request",
+  "after": "The office aims to reply within 1 working hour. For a burst pipe, turn off your stopcock now."
+ },
+ "footNote": "Demo assistant: automated answers from this demo firm's information. No cookies, nothing stored."
+});</script>
+<script id="tl-analytics">
+/* Tidy Ledger UK anonymous visit counter (GoatCounter, EU-hosted). No cookies; nothing is stored in the visitor's browser unless THEY press "Don't count my visits". No IP is stored by us or by GoatCounter.
+   INERT until TL_GC is replaced by the real GoatCounter code (the part before .goatcounter.com). Blocking the counter changes nothing else on the page.
+   Counts: page views/visits, referrers, utm_source/utm_campaign, and events: tool_start, tool_complete (once per page view), payhip_click, cta_click.
+   Own visits: open any page with ?tl_ignore=1 (undo ?tl_ignore=0); same switch as GoatCounter's own #toggle-goatcounter (localStorage key "skipgc"). */
+(function(){
+var TL_GC="tidyledgeruk",
+TL_HOSTS=",mtd-2027-checker-uk.netlify.app,gpsr-checker-uk.netlify.app,rd-precheck-uk.netlify.app,card-fee-calculator-uk.netlify.app,phone-line-switch-off-uk.netlify.app,mtd-which-software-uk.netlify.app,tidy-ledger-guides-uk.netlify.app,catalinbirtum-lang.github.io,",
+TL_SRC="https://gc.zgo.at/count.js";
+var d=document,w=window,q=[],ls=null,st=0,cp=0,site=location.hostname.replace(/\.netlify\.app$/,"");
+try{ls=w.localStorage}catch(e){}
+function off(){try{return !!(ls&&ls.getItem("skipgc")==="t")||navigator.doNotTrack==="1"}catch(e){return false}}
+/* own-visit switch: sets one flag in THIS browser only, and only when the owner asks with the URL parameter */
+try{var m=/[?&]tl_ignore=([01])(&|$)/.exec(location.search);if(m&&ls){if(m[1]==="1")ls.setItem("skipgc","t");else ls.removeItem("skipgc")}}catch(e){}
+function ready(){return !!(w.goatcounter&&w.goatcounter.count&&w.tlLoaded)}
+function T(kind,extra){try{if(off())return;var n=kind+"|"+site+(extra?"|"+extra:"");if(ready())w.goatcounter.count({path:n,title:n,event:true,no_session:true});else if(q.length<20)q.push(n)}catch(e){}}
+function flush(){var a=q.splice(0);for(var i=0;i<a.length;i++){try{w.goatcounter.count({path:a[i],title:a[i],event:true,no_session:true})}catch(e){}}}
+/* privacy: send only host+path, a referrer without query text, and only utm_source/medium/campaign - never other query text or a hash */
+function utm(){var o=[],p=new URLSearchParams(location.search);["utm_source","utm_medium","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)o.push(k+"="+encodeURIComponent(v.slice(0,60)))});return o.length?"?"+o.join("&"):""}
+function ref(){var p=new URLSearchParams(location.search).get("utm_source");if(p)return p.slice(0,60);try{var r=new URL(d.referrer);return r.origin===location.origin?"":r.origin+r.pathname}catch(e){return ""}}
+/* clicks: Payhip links -> payhip_click|path; data-tl-cta or a.btn -> cta_click|id; data-tl-event="name" -> that event */
+d.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;
+var o=t.closest("[data-tl-optout]");if(o){e.preventDefault();try{if(ls){if(ls.getItem("skipgc")==="t")ls.removeItem("skipgc");else ls.setItem("skipgc","t")}}catch(x){}opt();return}
+var a=t.closest("a[href]"),c=t.closest("[data-tl-cta]"),ev=t.closest("[data-tl-event]"),h=null;
+if(a){try{h=new URL(a.href,location.href)}catch(x){}}
+if(h&&/(^|\.)payhip\.com$/i.test(h.hostname)){T("payhip_click",h.pathname.slice(0,40));return}
+if(ev){T(String(ev.getAttribute("data-tl-event")).slice(0,40));return}
+if(c||(a&&/(^|\s)btn(\s|$)/.test(a.className))){var id=(c&&c.getAttribute("data-tl-cta"))||(h?(h.hostname===location.hostname?"":h.hostname)+h.pathname:"cta");T("cta_click",String(id).slice(0,40))}
+},true);
+d.addEventListener("keydown",function(e){var t=e.target;if((e.key==="Enter"||e.key===" ")&&t&&t.hasAttribute&&t.hasAttribute("data-tl-optout")){e.preventDefault();t.click()}},true);
+/* tool_start = first change/input inside [data-tl-tool]; tool_complete = first time [data-tl-result] holds a result */
+function S(){if(!st){st=1;T("tool_start")}}
+function C(r){if(!cp&&r.textContent.replace(/\s+/g,"")){cp=1;S();T("tool_complete")}}
+function init(){var tool=d.querySelector("[data-tl-tool]"),res=d.querySelector("[data-tl-result]");
+if(tool){tool.addEventListener("input",S,true);tool.addEventListener("change",S,true);tool.addEventListener("submit",S,true)}
+if(res){C(res);if(w.MutationObserver)new MutationObserver(function(){C(res)}).observe(res,{childList:true,subtree:true,characterData:true})}
+opt()}
+function opt(){var l=d.querySelectorAll("[data-tl-optout]"),x=false;try{x=!!(ls&&ls.getItem("skipgc")==="t")}catch(e){}for(var i=0;i<l.length;i++)l[i].textContent=x?"Counting is off in this browser - turn it back on":"Don't count my visits"}
+if(d.readyState==="loading")d.addEventListener("DOMContentLoaded",init);else init();
+/* load the counter only when configured, on the live hostnames, and not opted out / Do Not Track */
+if(/^[a-z0-9][a-z0-9-]{1,40}$/.test(TL_GC)&&TL_HOSTS.indexOf(","+location.hostname+",")>-1&&!off()){
+w.goatcounter={no_onload:true,no_events:true};
+var s=d.createElement("script");s.async=true;s.src=TL_SRC;s.setAttribute("data-goatcounter","https://"+TL_GC+".goatcounter.com/count");
+s.onload=function(){try{var g=w.goatcounter,og=g.get_data;
+g.get_data=function(v){var x=og(v);if(v&&v.event){x.r="";x.q=""}else{x.p=location.host+location.pathname;x.r=ref();x.t=d.title;x.q=utm()}return x};
+w.tlLoaded=1;g.count();flush()}catch(e){}};
+d.head.appendChild(s)}
+})();
+</script>
+</body></html>

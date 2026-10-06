@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /preview/
+Sitemap: https://catalinbirtum-lang.github.io/tidyledger-studio/sitemap.xml

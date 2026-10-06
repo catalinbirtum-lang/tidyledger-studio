@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fennick &amp; Fade Barbers (Demo) – sharp cuts, skin fades and hot towel shaves</title><meta name="description" content="Demo website for an invented barber shop, with a working FAQ chatbot that answers opening hours, prices and booking questions.">
+<meta name="theme-color" content="#b8862b"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23b8862b'/%3E%3C/svg%3E"><link rel="canonical" href="https://catalinbirtum-lang.github.io/tidyledger-studio/demos/barber/">
+<meta property="og:title" content="Fennick &amp; Fade Barbers (Demo) – sharp cuts, skin fades and hot towel shaves"><meta property="og:description" content="Demo website for an invented barber shop, with a working FAQ chatbot that answers opening hours, prices and booking questions."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../../assets/demo.css"><link rel="stylesheet" href="../../assets/chatbot.css">
+<style>:root{--bg:#f6f1e9;--ink:#1c1a17;--muted:#5f574c;--line:#e2d8c8;--accent:#b8862b;--accent-text:#1c1a17;--alt-bg:#efe6d8;
+  --font-head:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --hero-bg:radial-gradient(1200px 500px at 85% 10%,#3a3226 0%,#1c1a17 60%);--hero-ink:#f6f1e9;--ghost:#f6f1e9;--eyebrow:#e0b45a;--pill-bg:rgba(255,255,255,.1);
+  --strip-bg:#1c1a17;--strip-ink:#e9dcc3;--band-bg:#1c1a17;--radius:6px;--radius-btn:4px;--h1-weight:700;--h1-track:-.01em;--brand-track:.04em;--price:#8a6216;--foot-bg:#14120f}</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>Demo site</strong> for an invented business, built by Tidy Ledger Studio. Try the chat button. <a href="../../">See packages &amp; prices &rarr;</a></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="#top"><svg viewBox="0 0 40 40"><rect width="40" height="40" rx="6" fill="#1c1a17"/><path d="M11 9h9M11 9v22M11 20h7" stroke="#e0b45a" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M24 9h6M24 9v22M24 20h5" stroke="#f6f1e9" stroke-width="3" stroke-linecap="round" fill="none"/></svg><span>Fennick &amp; Fade<small>Barbers · Demo</small></span></a>
+<nav class="nav" aria-label="Main"><a href="#services">Prices</a><a href="#hours">Hours</a><a href="#faq">FAQ</a><a href="#find">Find us</a>
+<button class="btn sm" type="button" data-chat-book="">Book a cut</button></nav></div></header>
+<main id="main">
+<section class="hero" id="top"><div class="wrap"><div>
+<span class="eyebrow">Barbers · Leeds · Demo</span><h1>Sharp cuts. Proper shaves. No fuss.</h1><p class="lead">Traditional barbering with modern fades, for all ages. Book ahead or walk in – our assistant answers questions any time, even after closing.</p>
+<div class="ctas"><button class="btn" type="button" data-chat-book="">Book a cut</button><a class="btn ghost" href="#services">Prices</a></div>
+<span class="status" data-tlc-status>Opening hours below</span></div>
+<div class="hero-art"><svg viewBox="0 0 500 450" role="img" aria-label="Illustration: barber pole, scissors and a chat bubble">
+<defs><pattern id="st" width="40" height="40" patternUnits="userSpaceOnUse" patternTransform="rotate(35)"><rect width="40" height="40" fill="#f6f1e9"/><rect width="13" height="40" fill="#b23a2e"/><rect x="20" width="13" height="40" fill="#1f4f8b"/></pattern>
+<radialGradient id="gl" cx=".5" cy=".4" r=".6"><stop offset="0" stop-color="#e0b45a" stop-opacity=".35"/><stop offset="1" stop-color="#e0b45a" stop-opacity="0"/></radialGradient></defs>
+<circle cx="250" cy="190" r="190" fill="url(#gl)"/>
+<rect x="95" y="40" width="70" height="300" rx="35" fill="url(#st)" stroke="#e0b45a" stroke-width="6"/>
+<rect x="85" y="22" width="90" height="28" rx="14" fill="#e0b45a"/><rect x="85" y="330" width="90" height="28" rx="14" fill="#e0b45a"/>
+<g transform="translate(300 150) rotate(-30)" stroke="#f6f1e9" stroke-width="10" fill="none" stroke-linecap="round"><circle cx="-40" cy="80" r="26"/><circle cx="40" cy="80" r="26"/><path d="M-26 58 30-80M26 58-30-80" stroke="#e0b45a"/></g>
+<g font-family="system-ui,Segoe UI,Arial" font-size="15">
+<rect x="250" y="310" width="230" height="44" rx="14" fill="#e0b45a"/><text x="266" y="338" fill="#1c1a17">Open on Sunday?</text>
+<rect x="190" y="366" width="290" height="62" rx="14" fill="#fff" stroke="#00000018"/><text x="206" y="392" fill="#222">Yes – Sunday 10am–2pm.</text><text x="206" y="414" fill="#222">Want me to book you in?</text></g></svg></div></div></section>
+<div class="strip"><div class="wrap"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12"/></svg><span>Skin fades &amp; classic cuts</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Late night Thursday till 8pm</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg><span>Instant answers, 24/7</span></div></div></div>
+<section class="block" id="services"><div class="wrap"><div class="sec-head"><h2>Prices</h2><p>Clear prices, no surprises. Card and cash both welcome.</p></div>
+<div class="cards"><article class="card"><h3>Classic cut</h3><div class="price">£18</div><div class="meta">30 min</div><p>Scissor or clipper cut, finished and styled.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Classic cut">Book a cut</button></article>
+<article class="card"><h3>Skin fade</h3><div class="price">£22</div><div class="meta">40 min</div><p>Seamless fade from skin, any length on top.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Skin fade">Book a cut</button></article>
+<article class="card"><h3>Beard trim &amp; shape</h3><div class="price">£12</div><div class="meta">20 min</div><p>Shape, line-up and hot towel finish.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Beard trim &amp; shape">Book a cut</button></article>
+<article class="card"><h3>Hot towel shave</h3><div class="price">£20</div><div class="meta">30 min</div><p>Traditional open-razor shave with hot towels.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Hot towel shave">Book a cut</button></article>
+<article class="card"><h3>Cut &amp; beard combo</h3><div class="price">£30</div><div class="meta">50 min</div><p>Any cut plus a full beard trim and shape.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Cut &amp; beard combo">Book a cut</button></article>
+<article class="card"><h3>Kids&#x27; cut (under 12)</h3><div class="price">£13</div><div class="meta">25 min</div><p>Patient, quick and fun – first cuts welcome.</p>
+<button class="btn sm ghost" type="button" data-chat-book="Kids&#x27; cut (under 12)">Book a cut</button></article>
+<article class="card"><h3>OAP cut</h3><div class="price">£14</div><div class="meta">30 min</div><p>Classic cut, Tuesday and Wednesday.</p>
+<button class="btn sm ghost" type="button" data-chat-book="OAP cut">Book a cut</button></article></div></div></section>
+<section class="block alt" id="about"><div class="wrap two"><div class="sec-head"><h2>What to expect</h2><p>Sample copy for a demo business – your real details go here.</p></div><ul class="ticks"><li>A relaxed shop with a proper consultation before every cut.</li><li>Hot towel finish on every shave, and a quick tidy-up of neckline and brows on request.</li><li>Children welcome – kids&#x27; cuts for under-12s every day we&#x27;re open.</li><li>Step-free entrance and a wide door for prams and wheelchairs.</li></ul></div></section>
+<section class="block" id="hours"><div class="wrap two">
+<div class="panel"><h3>Opening hours</h3><table class="hours"><tbody data-tlc-hours><tr><td>Loading…</td></tr></tbody></table><p class="meta" style="color:var(--muted);font-size:14px;margin:12px 0 0">Bank holidays: usually 10am–2pm – check this chat or the shop window the week before.</p></div>
+<div class="panel" id="find"><h3>Find us</h3><p style="margin-top:0;color:var(--muted)">Demo address: Example Street, Leeds city centre. A short walk from the bus station; pay-and-display parking nearby.</p><div class="map"><svg viewBox="0 0 600 300" role="img" aria-label="Stylised demo map (not a real location)"><rect width="600" height="300" fill="#e9dfcd"/>
+<path d="M0 210C120 190 200 240 320 215S520 160 600 180V300H0z" fill="#8fb3c9" opacity=".55"/>
+<g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90H610M180-10V310M420-10 380 310M0 160C200 150 300 120 610 140"/></g>
+<g stroke="#fff" stroke-width="6" fill="none" opacity=".8"><path d="M60-10V310M300-10V310M520-10V310M-10 40H610M-10 250H610"/></g>
+<g transform="translate(300 128)"><path d="M0 0c-18-22-26-34-26-46a26 26 0 0 1 52 0c0 12-8 24-26 46z" fill="#b8862b"/><circle cy="-46" r="9" fill="#fff"/></g>
+<rect x="16" y="16" width="150" height="30" rx="8" fill="#fff"/><text x="28" y="36" font-family="system-ui,Arial" font-size="14" fill="#333">Demo map – not real</text></svg></div></div>
+</div></section>
+<section class="block alt faq" id="faq"><div class="wrap"><div class="sec-head"><h2>Questions</h2><p>The same answers the chat assistant gives – written once, shown in both places.</p></div>
+<div data-tlc-faqs></div>
+<div class="cta-band" style="margin-top:34px"><div><h2>Still got a question?</h2><p>Our assistant answers instantly – day or night.</p><div class="chips-row"><button type="button" data-chat-ask="Opening hours">Opening hours</button><button type="button" data-chat-ask="Prices">Prices</button><button type="button" data-chat-ask="Do you take walk-ins?">Do you take walk-ins?</button><button type="button" data-chat-ask="Where are you?">Where are you?</button></div></div>
+<button class="btn" type="button" data-chat-book="">Book a cut</button></div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<p class="demo-note"><strong>Demo site by Tidy Ledger Studio.</strong> Fennick &amp; Fade is an invented business: names, address, prices and details are samples, not a real company. Want a site and chatbot like this for your business? <a href="../../">See the packages</a>.</p>
+<p>&copy; 2026 Tidy Ledger Studio (sample content). No cookies. Visits are counted anonymously (GoatCounter, EU-hosted; no IP address stored). <a href="#" data-tl-optout role="button" tabindex="0">Don't count my visits</a></p>
+<p><a href="../../">Studio home</a> · <a href="../barber/">Barber demo</a> · <a href="../plumber/">Plumber demo</a> · <a href="../cafe/">Café demo</a></p>
+</div></footer>
+<script src="../../assets/chatbot.js"></script>
+<script>TLChat.init({
+ "business": "Fennick & Fade",
+ "botName": "Fennick & Fade assistant",
+ "demo": true,
+ "accent": "#b8862b",
+ "accentText": "#1c1a17",
+ "launcherLabel": "Ask us",
+ "greeting": "Hi! I'm the Fennick & Fade assistant (demo). Ask me about prices, opening hours, walk-ins or booking a cut.",
+ "suggestions": [
+  "Opening hours",
+  "Prices",
+  "Do you take walk-ins?",
+  "Book a cut"
+ ],
+ "hours": {
+  "mon": [],
+  "tue": [
+   [
+    "09:00",
+    "18:00"
+   ]
+  ],
+  "wed": [
+   [
+    "09:00",
+    "18:00"
+   ]
+  ],
+  "thu": [
+   [
+    "09:00",
+    "20:00"
+   ]
+  ],
+  "fri": [
+   [
+    "09:00",
+    "18:00"
+   ]
+  ],
+  "sat": [
+   [
+    "08:30",
+    "16:00"
+   ]
+  ],
+  "sun": [
+   [
+    "10:00",
+    "14:00"
+   ]
+  ]
+ },
+ "hoursNote": "Bank holidays: usually 10am–2pm – check this chat or the shop window the week before.",
+ "pricesIntro": "Here's our price list:",
+ "pricesNote": "OAP cuts (£14) are Tuesday to Wednesday only.",
+ "services": [
+  {
+   "name": "Classic cut",
+   "price": "£18",
+   "duration": "30 min",
+   "keywords": [
+    "haircut",
+    "hair cut",
+    "scissor cut",
+    "trim",
+    "short back and sides",
+    "regular cut"
+   ],
+   "blurb": "Scissor or clipper cut, finished and styled."
+  },
+  {
+   "name": "Skin fade",
+   "price": "£22",
+   "duration": "40 min",
+   "keywords": [
+    "fade",
+    "bald fade",
+    "zero fade",
+    "taper"
+   ],
+   "blurb": "Seamless fade from skin, any length on top."
+  },
+  {
+   "name": "Beard trim & shape",
+   "price": "£12",
+   "duration": "20 min",
+   "keywords": [
+    "beard",
+    "beard trim",
+    "line up",
+    "lineup",
+    "shape up"
+   ],
+   "blurb": "Shape, line-up and hot towel finish."
+  },
+  {
+   "name": "Hot towel shave",
+   "price": "£20",
+   "duration": "30 min",
+   "keywords": [
+    "shave",
+    "wet shave",
+    "cut throat",
+    "razor"
+   ],
+   "blurb": "Traditional open-razor shave with hot towels."
+  },
+  {
+   "name": "Cut & beard combo",
+   "price": "£30",
+   "duration": "50 min",
+   "keywords": [
+    "combo",
+    "cut and beard",
+    "haircut and beard",
+    "both"
+   ],
+   "blurb": "Any cut plus a full beard trim and shape."
+  },
+  {
+   "name": "Kids' cut (under 12)",
+   "price": "£13",
+   "duration": "25 min",
+   "keywords": [
+    "kids",
+    "kid",
+    "child",
+    "children",
+    "son",
+    "boy",
+    "junior"
+   ],
+   "blurb": "Patient, quick and fun – first cuts welcome."
+  },
+  {
+   "name": "OAP cut",
+   "price": "£14",
+   "duration": "30 min",
+   "keywords": [
+    "oap",
+    "pensioner",
+    "senior",
+    "older"
+   ],
+   "blurb": "Classic cut, Tuesday and Wednesday."
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you take walk-ins?",
+   "keywords": [
+    "walk in",
+    "walk ins",
+    "walkin",
+    "without appointment",
+    "just turn up",
+    "drop in",
+    "no appointment",
+    "queue",
+    "wait"
+   ],
+   "a": "Yes – walk-ins are welcome whenever there's a free chair. Saturdays get busy, so booking ahead is the safest way to avoid a wait."
+  },
+  {
+   "q": "Do you take card payments?",
+   "keywords": [
+    "card",
+    "cash",
+    "pay",
+    "payment",
+    "contactless",
+    "apple pay",
+    "amex"
+   ],
+   "a": "Yes, we take card, contactless, Apple Pay, Google Pay and cash."
+  },
+  {
+   "q": "What's your cancellation policy?",
+   "keywords": [
+    "cancel",
+    "cancellation",
+    "reschedule",
+    "change booking",
+    "late",
+    "running late",
+    "no show"
+   ],
+   "a": "No charge if you cancel or move your booking with at least 4 hours' notice. If you're running more than 10 minutes late we'll fit you in where we can."
+  },
+  {
+   "q": "Do you sell gift vouchers?",
+   "keywords": [
+    "voucher",
+    "gift",
+    "present",
+    "gift card",
+    "fathers day",
+    "birthday"
+   ],
+   "a": "Yes – gift vouchers from £10, available in the shop."
+  },
+  {
+   "q": "Is there parking nearby?",
+   "keywords": [
+    "parking",
+    "park",
+    "car park",
+    "drive"
+   ],
+   "a": "There's pay-and-display parking two minutes' walk away, and the bus station is close by.",
+   "onPage": false
+  },
+  {
+   "q": "Is the shop accessible?",
+   "keywords": [
+    "wheelchair",
+    "accessible",
+    "access",
+    "step",
+    "pram",
+    "buggy",
+    "disabled"
+   ],
+   "a": "Yes – step-free entrance and a wide door for wheelchairs and prams."
+  },
+  {
+   "q": "Do you cut women's or long hair?",
+   "keywords": [
+    "women",
+    "ladies",
+    "long hair",
+    "female",
+    "girl"
+   ],
+   "a": "We specialise in short cuts and fades for anyone. For long-hair restyles, ask in the booking form and we'll let you know honestly if we're the right fit."
+  }
+ ],
+ "locationText": "We're on Example Street in Leeds city centre (demo address), a short walk from the bus station. Pay-and-display parking is two minutes away.",
+ "contactText": "The quickest way to reach the team is the booking request form here – they reply by text or email. You can also pop into the shop during opening hours.",
+ "booking": {
+  "cta": "Book a cut",
+  "title": "Book a cut (request)",
+  "intro": "Great – pop your details in and the team will confirm your slot by text or email.",
+  "optionLabel": "Service",
+  "timeOptions": [
+   "Morning",
+   "Lunchtime",
+   "Afternoon",
+   "Evening (Thu only)"
+  ],
+  "after": "The team usually replies within a couple of hours during opening times."
+ },
+ "footNote": "Demo assistant: automated answers from this demo shop's information. No cookies, nothing stored."
+});</script>
+<script id="tl-analytics">
+/* Tidy Ledger UK anonymous visit counter (GoatCounter, EU-hosted). No cookies; nothing is stored in the visitor's browser unless THEY press "Don't count my visits". No IP is stored by us or by GoatCounter.
+   INERT until TL_GC is replaced by the real GoatCounter code (the part before .goatcounter.com). Blocking the counter changes nothing else on the page.
+   Counts: page views/visits, referrers, utm_source/utm_campaign, and events: tool_start, tool_complete (once per page view), payhip_click, cta_click.
+   Own visits: open any page with ?tl_ignore=1 (undo ?tl_ignore=0); same switch as GoatCounter's own #toggle-goatcounter (localStorage key "skipgc"). */
+(function(){
+var TL_GC="tidyledgeruk",
+TL_HOSTS=",mtd-2027-checker-uk.netlify.app,gpsr-checker-uk.netlify.app,rd-precheck-uk.netlify.app,card-fee-calculator-uk.netlify.app,phone-line-switch-off-uk.netlify.app,mtd-which-software-uk.netlify.app,tidy-ledger-guides-uk.netlify.app,catalinbirtum-lang.github.io,",
+TL_SRC="https://gc.zgo.at/count.js";
+var d=document,w=window,q=[],ls=null,st=0,cp=0,site=location.hostname.replace(/\.netlify\.app$/,"");
+try{ls=w.localStorage}catch(e){}
+function off(){try{return !!(ls&&ls.getItem("skipgc")==="t")||navigator.doNotTrack==="1"}catch(e){return false}}
+/* own-visit switch: sets one flag in THIS browser only, and only when the owner asks with the URL parameter */
+try{var m=/[?&]tl_ignore=([01])(&|$)/.exec(location.search);if(m&&ls){if(m[1]==="1")ls.setItem("skipgc","t");else ls.removeItem("skipgc")}}catch(e){}
+function ready(){return !!(w.goatcounter&&w.goatcounter.count&&w.tlLoaded)}
+function T(kind,extra){try{if(off())return;var n=kind+"|"+site+(extra?"|"+extra:"");if(ready())w.goatcounter.count({path:n,title:n,event:true,no_session:true});else if(q.length<20)q.push(n)}catch(e){}}
+function flush(){var a=q.splice(0);for(var i=0;i<a.length;i++){try{w.goatcounter.count({path:a[i],title:a[i],event:true,no_session:true})}catch(e){}}}
+/* privacy: send only host+path, a referrer without query text, and only utm_source/medium/campaign - never other query text or a hash */
+function utm(){var o=[],p=new URLSearchParams(location.search);["utm_source","utm_medium","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)o.push(k+"="+encodeURIComponent(v.slice(0,60)))});return o.length?"?"+o.join("&"):""}
+function ref(){var p=new URLSearchParams(location.search).get("utm_source");if(p)return p.slice(0,60);try{var r=new URL(d.referrer);return r.origin===location.origin?"":r.origin+r.pathname}catch(e){return ""}}
+/* clicks: Payhip links -> payhip_click|path; data-tl-cta or a.btn -> cta_click|id; data-tl-event="name" -> that event */
+d.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;
+var o=t.closest("[data-tl-optout]");if(o){e.preventDefault();try{if(ls){if(ls.getItem("skipgc")==="t")ls.removeItem("skipgc");else ls.setItem("skipgc","t")}}catch(x){}opt();return}
+var a=t.closest("a[href]"),c=t.closest("[data-tl-cta]"),ev=t.closest("[data-tl-event]"),h=null;
+if(a){try{h=new URL(a.href,location.href)}catch(x){}}
+if(h&&/(^|\.)payhip\.com$/i.test(h.hostname)){T("payhip_click",h.pathname.slice(0,40));return}
+if(ev){T(String(ev.getAttribute("data-tl-event")).slice(0,40));return}
+if(c||(a&&/(^|\s)btn(\s|$)/.test(a.className))){var id=(c&&c.getAttribute("data-tl-cta"))||(h?(h.hostname===location.hostname?"":h.hostname)+h.pathname:"cta");T("cta_click",String(id).slice(0,40))}
+},true);
+d.addEventListener("keydown",function(e){var t=e.target;if((e.key==="Enter"||e.key===" ")&&t&&t.hasAttribute&&t.hasAttribute("data-tl-optout")){e.preventDefault();t.click()}},true);
+/* tool_start = first change/input inside [data-tl-tool]; tool_complete = first time [data-tl-result] holds a result */
+function S(){if(!st){st=1;T("tool_start")}}
+function C(r){if(!cp&&r.textContent.replace(/\s+/g,"")){cp=1;S();T("tool_complete")}}
+function init(){var tool=d.querySelector("[data-tl-tool]"),res=d.querySelector("[data-tl-result]");
+if(tool){tool.addEventListener("input",S,true);tool.addEventListener("change",S,true);tool.addEventListener("submit",S,true)}
+if(res){C(res);if(w.MutationObserver)new MutationObserver(function(){C(res)}).observe(res,{childList:true,subtree:true,characterData:true})}
+opt()}
+function opt(){var l=d.querySelectorAll("[data-tl-optout]"),x=false;try{x=!!(ls&&ls.getItem("skipgc")==="t")}catch(e){}for(var i=0;i<l.length;i++)l[i].textContent=x?"Counting is off in this browser - turn it back on":"Don't count my visits"}
+if(d.readyState==="loading")d.addEventListener("DOMContentLoaded",init);else init();
+/* load the counter only when configured, on the live hostnames, and not opted out / Do Not Track */
+if(/^[a-z0-9][a-z0-9-]{1,40}$/.test(TL_GC)&&TL_HOSTS.indexOf(","+location.hostname+",")>-1&&!off()){
+w.goatcounter={no_onload:true,no_events:true};
+var s=d.createElement("script");s.async=true;s.src=TL_SRC;s.setAttribute("data-goatcounter","https://"+TL_GC+".goatcounter.com/count");
+s.onload=function(){try{var g=w.goatcounter,og=g.get_data;
+g.get_data=function(v){var x=og(v);if(v&&v.event){x.r="";x.q=""}else{x.p=location.host+location.pathname;x.r=ref();x.t=d.title;x.q=utm()}return x};
+w.tlLoaded=1;g.count();flush()}catch(e){}};
+d.head.appendChild(s)}
+})();
+</script>
+</body></html>

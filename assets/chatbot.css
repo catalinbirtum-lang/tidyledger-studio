@@ -1,0 +1,41 @@
+/* Tidy Ledger Studio chatbot widget styles. Themeable with --tlc-accent / --tlc-accent-text. */
+.tlc{--tlc-accent:#1f6f5c;--tlc-accent-text:#fff;--tlc-bg:#fff;--tlc-ink:#1d232b;--tlc-muted:#5b6672;--tlc-line:#e3e7ec;
+  position:fixed;right:18px;bottom:18px;z-index:9999;font:15px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--tlc-ink)}
+.tlc *{box-sizing:border-box}
+.tlc-launch{display:flex;align-items:center;gap:8px;margin-left:auto;border:0;border-radius:999px;padding:12px 18px 12px 14px;cursor:pointer;
+  background:var(--tlc-accent);color:var(--tlc-accent-text);font-weight:600;font-size:15px;font-family:inherit;box-shadow:0 10px 30px rgba(0,0,0,.22);transition:transform .15s}
+.tlc-launch:hover{transform:translateY(-2px)}
+.tlc-launch:focus-visible,.tlc button:focus-visible,.tlc input:focus-visible,.tlc select:focus-visible,.tlc textarea:focus-visible{outline:3px solid #ffbf47;outline-offset:2px}
+.tlc-is-open .tlc-launch{display:none}
+.tlc-panel{width:min(380px,calc(100vw - 24px));height:min(600px,calc(100vh - 36px));display:flex;flex-direction:column;background:var(--tlc-bg);
+  border-radius:18px;box-shadow:0 24px 60px rgba(10,20,30,.28);overflow:hidden;border:1px solid var(--tlc-line)}
+.tlc-panel[hidden]{display:none}
+.tlc-head{display:flex;align-items:center;gap:10px;padding:14px 14px 14px 18px;background:var(--tlc-accent);color:var(--tlc-accent-text)}
+.tlc-head-t{display:flex;flex-direction:column;flex:1;min-width:0}
+.tlc-head strong{font-size:16px}
+.tlc-sub{font-size:12.5px;opacity:.85}
+.tlc-x{border:0;background:rgba(255,255,255,.18);color:inherit;width:34px;height:34px;border-radius:50%;font-size:22px;line-height:1;cursor:pointer}
+.tlc-log{flex:1;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px;background:#f6f8fa}
+.tlc-msg{max-width:88%;padding:10px 13px;border-radius:14px;white-space:pre-line;overflow-wrap:anywhere}
+.tlc-bot{background:#fff;border:1px solid var(--tlc-line);border-bottom-left-radius:4px;align-self:flex-start}
+.tlc-user{background:var(--tlc-accent);color:var(--tlc-accent-text);border-bottom-right-radius:4px;align-self:flex-end}
+.tlc-typing{display:flex;gap:4px;padding:13px}
+.tlc-typing span{width:7px;height:7px;border-radius:50%;background:#9aa5b1;animation:tlcb 1s infinite}
+.tlc-typing span:nth-child(2){animation-delay:.15s}.tlc-typing span:nth-child(3){animation-delay:.3s}
+@keyframes tlcb{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+.tlc-chips{display:flex;flex-wrap:wrap;gap:6px;padding:8px 12px 0;background:#fff;border-top:1px solid var(--tlc-line)}
+.tlc-chips:empty{display:none}
+.tlc-chip{border:1px solid var(--tlc-accent);color:var(--tlc-accent);background:#fff;border-radius:999px;padding:6px 11px;font-weight:500;font-size:13px;font-family:inherit;cursor:pointer}
+.tlc-chip:hover{background:var(--tlc-accent);color:var(--tlc-accent-text)}
+.tlc-form{display:flex;gap:8px;padding:10px 12px;background:#fff}
+.tlc-in{flex:1;min-width:0;border:1px solid var(--tlc-line);border-radius:10px;padding:10px 12px;font:inherit;color:inherit}
+.tlc-send,.tlc-submit{border:0;border-radius:10px;padding:10px 14px;background:var(--tlc-accent);color:var(--tlc-accent-text);font-weight:600;font-size:14px;font-family:inherit;cursor:pointer}
+.tlc-foot{margin:0;padding:0 12px 10px;background:#fff;font-size:11.5px;color:var(--tlc-muted)}
+.tlc-book{display:flex;flex-direction:column;gap:8px;width:100%;max-width:100%;white-space:normal}
+.tlc-f{display:flex;flex-direction:column;gap:3px;font-size:13px;color:var(--tlc-muted)}
+.tlc-f input,.tlc-f select,.tlc-f textarea{border:1px solid var(--tlc-line);border-radius:8px;padding:8px 10px;font:inherit;font-size:14px;color:var(--tlc-ink);background:#fff;width:100%}
+.tlc-err{margin:0;color:#b42318;font-size:13px}.tlc-err:empty{display:none}
+.tlc-small{margin:0;font-size:11.5px;color:var(--tlc-muted)}
+.tlc-done{opacity:.65}
+@media (max-width:520px){.tlc{right:10px;bottom:10px}.tlc-panel{width:calc(100vw - 20px);height:calc(100vh - 20px);height:calc(100dvh - 20px)}}
+@media (prefers-reduced-motion:reduce){.tlc *{animation:none!important;transition:none!important}}

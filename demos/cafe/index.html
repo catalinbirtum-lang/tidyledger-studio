@@ -1,0 +1,424 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Larkspur Kettle (Demo) – neighbourhood café for breakfast, brunch and cake</title><meta name="description" content="Demo website for an invented café, with a working chatbot for the menu, dietary questions, opening hours and table requests.">
+<meta name="theme-color" content="#4f7a5a"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%234f7a5a'/%3E%3C/svg%3E"><link rel="canonical" href="https://catalinbirtum-lang.github.io/tidyledger-studio/demos/cafe/">
+<meta property="og:title" content="The Larkspur Kettle (Demo) – neighbourhood café for breakfast, brunch and cake"><meta property="og:description" content="Demo website for an invented café, with a working chatbot for the menu, dietary questions, opening hours and table requests."><meta property="og:type" content="website">
+<link rel="stylesheet" href="../../assets/demo.css"><link rel="stylesheet" href="../../assets/chatbot.css">
+<style>:root{--bg:#fbf8f2;--ink:#2a2a22;--muted:#66665a;--line:#e8e2d3;--accent:#4f7a5a;--accent-text:#ffffff;--alt-bg:#f1ecdf;
+  --font-head:"Avenir Next","Trebuchet MS","Segoe UI",system-ui,sans-serif;--font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  --hero-bg:linear-gradient(180deg,#f3eddd 0%,#fbf8f2 100%);--eyebrow:#b5653b;--strip-bg:#4f7a5a;--band-bg:#3d5f46;--radius:22px;--price:#b5653b;--foot-bg:#23281f}</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>Demo site</strong> for an invented business, built by Tidy Ledger Studio. Try the chat button. <a href="../../">See packages &amp; prices &rarr;</a></div>
+<header class="site-head"><div class="wrap">
+<a class="brand" href="#top"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#4f7a5a"/><path d="M11 17h15v6a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6z" fill="#fbf8f2"/><path d="M26 19h2a3 3 0 0 1 0 6h-2" stroke="#fbf8f2" stroke-width="2" fill="none"/><path d="M16 9c-1 2 1 3 0 5M21 9c-1 2 1 3 0 5" stroke="#f3d9a4" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg><span>The Larkspur Kettle<small>Café · Demo</small></span></a>
+<nav class="nav" aria-label="Main"><a href="#services">Menu</a><a href="#hours">Hours</a><a href="#faq">FAQ</a><a href="#find">Find us</a>
+<button class="btn sm" type="button" data-chat-book="">Book a table</button></nav></div></header>
+<main id="main">
+<section class="hero" id="top"><div class="wrap"><div>
+<span class="eyebrow">Café · York · Demo</span><h1>Good coffee, proper breakfasts, homemade cake.</h1><p class="lead">A small neighbourhood café near the river. Dogs welcome, vegan and gluten-free options every day, and our chat assistant knows the whole menu.</p>
+<div class="ctas"><button class="btn" type="button" data-chat-book="">Book a table</button><a class="btn ghost" href="#services">Menu favourites</a></div>
+<span class="status" data-tlc-status>Opening hours below</span></div>
+<div class="hero-art"><svg viewBox="0 0 500 450" role="img" aria-label="Illustration: a steaming cup of coffee, a cake slice, leaves and a chat bubble">
+<circle cx="240" cy="190" r="170" fill="#e6dcc4"/>
+<path d="M150 60c-14 20 14 30 0 52M200 50c-14 20 14 30 0 52M250 60c-14 20 14 30 0 52" stroke="#b5653b" stroke-width="7" fill="none" stroke-linecap="round" opacity=".7"/>
+<ellipse cx="200" cy="300" rx="150" ry="26" fill="#d6c9ab"/>
+<path d="M90 140h220v80a90 90 0 0 1-90 90h-40a90 90 0 0 1-90-90z" fill="#4f7a5a"/><path d="M310 165h22a38 38 0 0 1 0 76h-30" stroke="#4f7a5a" stroke-width="18" fill="none"/>
+<ellipse cx="200" cy="140" rx="110" ry="18" fill="#7a4b2a"/><path d="M175 136c15-10 35-10 50 0-15 10-35 10-50 0z" fill="#e9d2b0"/>
+<g transform="translate(370 70)"><path d="M0 60 70 30v60H0z" fill="#f3d9a4"/><path d="M0 60 70 30" stroke="#b5653b" stroke-width="6"/><rect x="0" y="72" width="70" height="8" fill="#e58f8f"/></g>
+<path d="M40 250c40-50 80-40 90-30-30 0-60 20-90 30z" fill="#7aa36f"/><path d="M420 200c-30-40-70-40-80-30 26 4 50 18 80 30z" fill="#7aa36f"/>
+<g font-family="system-ui,Segoe UI,Arial" font-size="15">
+<rect x="250" y="310" width="230" height="44" rx="14" fill="#4f7a5a"/><text x="266" y="338" fill="#fff">Any vegan cake today?</text>
+<rect x="190" y="366" width="290" height="62" rx="14" fill="#fff" stroke="#00000018"/><text x="206" y="392" fill="#222">Usually yes – and vegan</text><text x="206" y="414" fill="#222">soup every day.</text></g></svg></div></div></section>
+<div class="strip"><div class="wrap"><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 19C5 9 11 5 20 4c0 9-4 15-13 15"/><path d="M5 19 13 11"/></svg><span>Vegan &amp; gluten-free options</span></div><div><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="6" cy="10" r="2"/><circle cx="10" cy="6" r="2"/><circle cx="14" cy="6" r="2"/><circle cx="18" cy="10" r="2"/><path d="M12 11c3 0 6 4 6 6.5 0 2-2 2.5-3 2-1.2-.6-2-.8-3-.8s-1.8.2-3 .8c-1 .5-3 0-3-2C6 15 9 11 12 11z"/></svg><span>Dog friendly</span></div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4z"/><path d="M8 10h8M8 13h5"/></svg><span>Ask about allergens any time</span></div></div></div>
+<section class="block" id="services"><div class="wrap"><div class="sec-head"><h2>Menu favourites</h2><p>A taste of the menu – specials change weekly. Please tell us about any allergies when you order.</p></div>
+<div class="cards"><article class="card"><h3>Flat white</h3><div class="price">£3.40</div><p>Double shot, silky milk. Other coffees from £2.80.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Flat white vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Pot of tea</h3><div class="price">£2.90</div><p>Breakfast, Earl Grey, green or herbal.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Pot of tea vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Full breakfast</h3><div class="price">£9.50</div><p>Bacon, sausage, egg, beans, mushrooms, tomato, toast.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Full breakfast vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Vegan breakfast</h3><div class="price">£9.50</div><p>Plant sausage, smashed avocado, beans, mushrooms, toast.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Vegan breakfast vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Sourdough toastie</h3><div class="price">£6.80</div><p>Cheese &amp; ham, or mushroom &amp; cheddar, with salad.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Sourdough toastie vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Soup of the day</h3><div class="price">£6.20</div><p>Always vegan, served with sourdough.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Soup of the day vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Scone with jam &amp; cream</h3><div class="price">£4.20</div><p>Baked every morning.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Scone with jam &amp; cream vegan or gluten-free?">Ask about this</button></article>
+<article class="card"><h3>Cake of the day</h3><div class="price">£3.90</div><p>Ask what&#x27;s on the counter – usually a GF option.</p>
+<button class="btn sm ghost" type="button" data-chat-ask="Is the Cake of the day vegan or gluten-free?">Ask about this</button></article></div></div></section>
+<section class="block alt" id="about"><div class="wrap two"><div class="sec-head"><h2>Why people come back</h2><p>Sample copy for a demo business – your real details go here.</p></div><ul class="ticks"><li>Breakfast served all day, every day.</li><li>Coffee roasted in Yorkshire (demo detail), with oat, soy and almond milk at no extra charge.</li><li>High chairs, baby-changing and a step-free entrance.</li><li>Free wifi and plenty of plugs for the laptop crowd before 11am and after 2pm.</li></ul></div></section>
+<section class="block" id="hours"><div class="wrap two">
+<div class="panel"><h3>Opening hours</h3><table class="hours"><tbody data-tlc-hours><tr><td>Loading…</td></tr></tbody></table><p class="meta" style="color:var(--muted);font-size:14px;margin:12px 0 0">Kitchen closes 30 minutes before we do. Bank holidays: Sunday hours.</p></div>
+<div class="panel" id="find"><h3>Find us</h3><p style="margin-top:0;color:var(--muted)">Demo address: Example Lane, York – five minutes&#x27; walk from the river path. Nearest parking at the public car park round the corner.</p><div class="map"><svg viewBox="0 0 600 300" role="img" aria-label="Stylised demo map (not a real location)"><rect width="600" height="300" fill="#e7e2cf"/>
+<path d="M0 210C120 190 200 240 320 215S520 160 600 180V300H0z" fill="#9fc3b5" opacity=".55"/>
+<g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round"><path d="M-10 90H610M180-10V310M420-10 380 310M0 160C200 150 300 120 610 140"/></g>
+<g stroke="#fff" stroke-width="6" fill="none" opacity=".8"><path d="M60-10V310M300-10V310M520-10V310M-10 40H610M-10 250H610"/></g>
+<g transform="translate(300 128)"><path d="M0 0c-18-22-26-34-26-46a26 26 0 0 1 52 0c0 12-8 24-26 46z" fill="#4f7a5a"/><circle cy="-46" r="9" fill="#fff"/></g>
+<rect x="16" y="16" width="150" height="30" rx="8" fill="#fff"/><text x="28" y="36" font-family="system-ui,Arial" font-size="14" fill="#333">Demo map – not real</text></svg></div></div>
+</div></section>
+<section class="block alt faq" id="faq"><div class="wrap"><div class="sec-head"><h2>Questions</h2><p>The same answers the chat assistant gives – written once, shown in both places.</p></div>
+<div data-tlc-faqs></div>
+<div class="cta-band" style="margin-top:34px"><div><h2>Still got a question?</h2><p>Our assistant answers instantly – day or night.</p><div class="chips-row"><button type="button" data-chat-ask="Are you open now?">Are you open now?</button><button type="button" data-chat-ask="Menu &amp; prices">Menu &amp; prices</button><button type="button" data-chat-ask="Vegan options?">Vegan options?</button><button type="button" data-chat-ask="Where are you?">Where are you?</button></div></div>
+<button class="btn" type="button" data-chat-book="">Book a table</button></div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<p class="demo-note"><strong>Demo site by Tidy Ledger Studio.</strong> The Larkspur Kettle is an invented business: names, address, prices and details are samples, not a real company. Want a site and chatbot like this for your business? <a href="../../">See the packages</a>.</p>
+<p>&copy; 2026 Tidy Ledger Studio (sample content). No cookies. Visits are counted anonymously (GoatCounter, EU-hosted; no IP address stored). <a href="#" data-tl-optout role="button" tabindex="0">Don't count my visits</a></p>
+<p><a href="../../">Studio home</a> · <a href="../barber/">Barber demo</a> · <a href="../plumber/">Plumber demo</a> · <a href="../cafe/">Café demo</a></p>
+</div></footer>
+<script src="../../assets/chatbot.js"></script>
+<script>TLChat.init({
+ "business": "The Larkspur Kettle",
+ "botName": "Larkspur Kettle assistant",
+ "demo": true,
+ "accent": "#4f7a5a",
+ "launcherLabel": "Ask us",
+ "greeting": "Hello! I'm the Larkspur Kettle assistant (demo). Ask me about the menu, dietary options, dogs, opening hours or booking a table.",
+ "suggestions": [
+  "Are you open now?",
+  "Menu & prices",
+  "Vegan options?",
+  "Book a table"
+ ],
+ "hours": {
+  "mon": [
+   [
+    "08:00",
+    "16:00"
+   ]
+  ],
+  "tue": [
+   [
+    "08:00",
+    "16:00"
+   ]
+  ],
+  "wed": [
+   [
+    "08:00",
+    "16:00"
+   ]
+  ],
+  "thu": [
+   [
+    "08:00",
+    "16:00"
+   ]
+  ],
+  "fri": [
+   [
+    "08:00",
+    "16:00"
+   ]
+  ],
+  "sat": [
+   [
+    "08:30",
+    "17:00"
+   ]
+  ],
+  "sun": [
+   [
+    "09:30",
+    "15:00"
+   ]
+  ]
+ },
+ "hoursNote": "Kitchen closes 30 minutes before we do. Bank holidays: Sunday hours.",
+ "pricesIntro": "Some menu favourites:",
+ "dietNote": "Allergens: please always check with staff before ordering.",
+ "pricesNote": "Specials change weekly. Oat, soy and almond milk at no extra charge.",
+ "services": [
+  {
+   "name": "Flat white",
+   "diet": "Vegan with oat, soy or almond milk (no extra charge). Naturally gluten-free.",
+   "price": "£3.40",
+   "keywords": [
+    "coffee",
+    "latte",
+    "cappuccino",
+    "americano",
+    "espresso",
+    "flat white",
+    "mocha"
+   ],
+   "blurb": "Double shot, silky milk. Other coffees from £2.80."
+  },
+  {
+   "name": "Pot of tea",
+   "diet": "Vegan and gluten-free – plant milk on request.",
+   "price": "£2.90",
+   "keywords": [
+    "tea",
+    "earl grey",
+    "herbal",
+    "green tea",
+    "yorkshire tea"
+   ],
+   "blurb": "Breakfast, Earl Grey, green or herbal."
+  },
+  {
+   "name": "Full breakfast",
+   "diet": "Not vegetarian. Gluten-free version with GF bread and GF sausages on request.",
+   "price": "£9.50",
+   "keywords": [
+    "breakfast",
+    "full english",
+    "fry up",
+    "eggs",
+    "bacon",
+    "sausage"
+   ],
+   "blurb": "Bacon, sausage, egg, beans, mushrooms, tomato, toast."
+  },
+  {
+   "name": "Vegan breakfast",
+   "diet": "Vegan. Gluten-free with GF bread on request.",
+   "price": "£9.50",
+   "keywords": [
+    "vegan breakfast",
+    "plant based breakfast",
+    "veggie breakfast",
+    "vegetarian breakfast"
+   ],
+   "blurb": "Plant sausage, smashed avocado, beans, mushrooms, toast."
+  },
+  {
+   "name": "Sourdough toastie",
+   "diet": "Mushroom & cheddar is vegetarian; contains gluten and dairy. GF bread available.",
+   "price": "£6.80",
+   "keywords": [
+    "toastie",
+    "sandwich",
+    "cheese",
+    "ham",
+    "lunch",
+    "panini"
+   ],
+   "blurb": "Cheese & ham, or mushroom & cheddar, with salad."
+  },
+  {
+   "name": "Soup of the day",
+   "diet": "Always vegan. Served with sourdough (contains gluten) – GF bread available.",
+   "price": "£6.20",
+   "keywords": [
+    "soup",
+    "bread"
+   ],
+   "blurb": "Always vegan, served with sourdough."
+  },
+  {
+   "name": "Scone with jam & cream",
+   "diet": "Vegetarian; contains gluten, dairy and egg.",
+   "price": "£4.20",
+   "keywords": [
+    "scone",
+    "scones",
+    "cream tea",
+    "jam"
+   ],
+   "blurb": "Baked every morning."
+  },
+  {
+   "name": "Cake of the day",
+   "diet": "Changes daily – there's usually a gluten-free or vegan option; ask at the counter.",
+   "price": "£3.90",
+   "keywords": [
+    "cake",
+    "cakes",
+    "brownie",
+    "sweet",
+    "dessert",
+    "bake",
+    "traybake"
+   ],
+   "blurb": "Ask what's on the counter – usually a GF option."
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you have vegan and gluten-free options?",
+   "keywords": [
+    "vegan",
+    "vegetarian",
+    "veggie",
+    "plant based",
+    "gluten",
+    "gluten free",
+    "gf",
+    "coeliac",
+    "dairy free",
+    "dairy"
+   ],
+   "a": "Yes – a vegan breakfast, vegan soup every day, plant milks at no extra charge, and gluten-free bread and usually a gluten-free cake. Tell staff if you're coeliac and we'll take extra care."
+  },
+  {
+   "q": "Can I get allergen information?",
+   "keywords": [
+    "allergen",
+    "allergens",
+    "allergy",
+    "allergies",
+    "nut",
+    "nuts",
+    "peanut",
+    "sesame",
+    "egg allergy",
+    "milk allergy"
+   ],
+   "a": "Full allergen information for every dish is in a folder at the counter – please ask staff before you order. This chat can't guarantee allergen safety."
+  },
+  {
+   "q": "Are dogs allowed?",
+   "keywords": [
+    "dog",
+    "dogs",
+    "puppy",
+    "pet",
+    "pets",
+    "dog friendly"
+   ],
+   "a": "Well-behaved dogs are very welcome inside – water bowls by the door and dog biscuits at the counter."
+  },
+  {
+   "q": "Do you have wifi?",
+   "keywords": [
+    "wifi",
+    "wi fi",
+    "internet",
+    "laptop",
+    "work",
+    "plug",
+    "charge phone"
+   ],
+   "a": "Yes, free wifi. Laptops are welcome before 11am and after 2pm, when it's quieter."
+  },
+  {
+   "q": "Is it suitable for children?",
+   "keywords": [
+    "kids",
+    "children",
+    "child",
+    "baby",
+    "high chair",
+    "highchair",
+    "pram",
+    "buggy",
+    "baby change",
+    "family"
+   ],
+   "a": "Yes – high chairs, baby-changing, space for prams and a kids' lunchbox for £5.50."
+  },
+  {
+   "q": "Do you do takeaway?",
+   "keywords": [
+    "takeaway",
+    "take away",
+    "to go",
+    "takeout",
+    "reusable cup",
+    "keep cup"
+   ],
+   "a": "Yes, all drinks and most food can be taken away. Bring your own cup for 20p off."
+  },
+  {
+   "q": "Can I book the café for a private event?",
+   "keywords": [
+    "private",
+    "party",
+    "event",
+    "hire",
+    "baby shower",
+    "birthday party",
+    "group",
+    "large group"
+   ],
+   "a": "Yes – evening private hire for up to 30 people. Send a table request with 'private hire' in the notes and we'll get back to you."
+  }
+ ],
+ "locationText": "We're on Example Lane in York (demo address), five minutes' walk from the river path. Nearest parking is the public car park round the corner.",
+ "contactText": "Send a table request or a question with the form here and the team will reply by email or text. Or just pop in!",
+ "booking": {
+  "cta": "Book a table",
+  "title": "Table request",
+  "intro": "Lovely – tell us when and how many, and we'll confirm by text or email.",
+  "options": [
+   "Breakfast",
+   "Brunch",
+   "Lunch",
+   "Afternoon tea",
+   "Private hire enquiry"
+  ],
+  "optionLabel": "Occasion",
+  "extraField": {
+   "label": "Number of people",
+   "type": "select",
+   "required": true,
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7–10",
+    "More than 10"
+   ]
+  },
+  "timeLabel": "Preferred time",
+  "after": "Walk-ins are always welcome too – we keep some tables free."
+ },
+ "footNote": "Demo assistant: automated answers from this demo café's information. Allergens: always ask staff. No cookies."
+});</script>
+<script id="tl-analytics">
+/* Tidy Ledger UK anonymous visit counter (GoatCounter, EU-hosted). No cookies; nothing is stored in the visitor's browser unless THEY press "Don't count my visits". No IP is stored by us or by GoatCounter.
+   INERT until TL_GC is replaced by the real GoatCounter code (the part before .goatcounter.com). Blocking the counter changes nothing else on the page.
+   Counts: page views/visits, referrers, utm_source/utm_campaign, and events: tool_start, tool_complete (once per page view), payhip_click, cta_click.
+   Own visits: open any page with ?tl_ignore=1 (undo ?tl_ignore=0); same switch as GoatCounter's own #toggle-goatcounter (localStorage key "skipgc"). */
+(function(){
+var TL_GC="tidyledgeruk",
+TL_HOSTS=",mtd-2027-checker-uk.netlify.app,gpsr-checker-uk.netlify.app,rd-precheck-uk.netlify.app,card-fee-calculator-uk.netlify.app,phone-line-switch-off-uk.netlify.app,mtd-which-software-uk.netlify.app,tidy-ledger-guides-uk.netlify.app,catalinbirtum-lang.github.io,",
+TL_SRC="https://gc.zgo.at/count.js";
+var d=document,w=window,q=[],ls=null,st=0,cp=0,site=location.hostname.replace(/\.netlify\.app$/,"");
+try{ls=w.localStorage}catch(e){}
+function off(){try{return !!(ls&&ls.getItem("skipgc")==="t")||navigator.doNotTrack==="1"}catch(e){return false}}
+/* own-visit switch: sets one flag in THIS browser only, and only when the owner asks with the URL parameter */
+try{var m=/[?&]tl_ignore=([01])(&|$)/.exec(location.search);if(m&&ls){if(m[1]==="1")ls.setItem("skipgc","t");else ls.removeItem("skipgc")}}catch(e){}
+function ready(){return !!(w.goatcounter&&w.goatcounter.count&&w.tlLoaded)}
+function T(kind,extra){try{if(off())return;var n=kind+"|"+site+(extra?"|"+extra:"");if(ready())w.goatcounter.count({path:n,title:n,event:true,no_session:true});else if(q.length<20)q.push(n)}catch(e){}}
+function flush(){var a=q.splice(0);for(var i=0;i<a.length;i++){try{w.goatcounter.count({path:a[i],title:a[i],event:true,no_session:true})}catch(e){}}}
+/* privacy: send only host+path, a referrer without query text, and only utm_source/medium/campaign - never other query text or a hash */
+function utm(){var o=[],p=new URLSearchParams(location.search);["utm_source","utm_medium","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)o.push(k+"="+encodeURIComponent(v.slice(0,60)))});return o.length?"?"+o.join("&"):""}
+function ref(){var p=new URLSearchParams(location.search).get("utm_source");if(p)return p.slice(0,60);try{var r=new URL(d.referrer);return r.origin===location.origin?"":r.origin+r.pathname}catch(e){return ""}}
+/* clicks: Payhip links -> payhip_click|path; data-tl-cta or a.btn -> cta_click|id; data-tl-event="name" -> that event */
+d.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;
+var o=t.closest("[data-tl-optout]");if(o){e.preventDefault();try{if(ls){if(ls.getItem("skipgc")==="t")ls.removeItem("skipgc");else ls.setItem("skipgc","t")}}catch(x){}opt();return}
+var a=t.closest("a[href]"),c=t.closest("[data-tl-cta]"),ev=t.closest("[data-tl-event]"),h=null;
+if(a){try{h=new URL(a.href,location.href)}catch(x){}}
+if(h&&/(^|\.)payhip\.com$/i.test(h.hostname)){T("payhip_click",h.pathname.slice(0,40));return}
+if(ev){T(String(ev.getAttribute("data-tl-event")).slice(0,40));return}
+if(c||(a&&/(^|\s)btn(\s|$)/.test(a.className))){var id=(c&&c.getAttribute("data-tl-cta"))||(h?(h.hostname===location.hostname?"":h.hostname)+h.pathname:"cta");T("cta_click",String(id).slice(0,40))}
+},true);
+d.addEventListener("keydown",function(e){var t=e.target;if((e.key==="Enter"||e.key===" ")&&t&&t.hasAttribute&&t.hasAttribute("data-tl-optout")){e.preventDefault();t.click()}},true);
+/* tool_start = first change/input inside [data-tl-tool]; tool_complete = first time [data-tl-result] holds a result */
+function S(){if(!st){st=1;T("tool_start")}}
+function C(r){if(!cp&&r.textContent.replace(/\s+/g,"")){cp=1;S();T("tool_complete")}}
+function init(){var tool=d.querySelector("[data-tl-tool]"),res=d.querySelector("[data-tl-result]");
+if(tool){tool.addEventListener("input",S,true);tool.addEventListener("change",S,true);tool.addEventListener("submit",S,true)}
+if(res){C(res);if(w.MutationObserver)new MutationObserver(function(){C(res)}).observe(res,{childList:true,subtree:true,characterData:true})}
+opt()}
+function opt(){var l=d.querySelectorAll("[data-tl-optout]"),x=false;try{x=!!(ls&&ls.getItem("skipgc")==="t")}catch(e){}for(var i=0;i<l.length;i++)l[i].textContent=x?"Counting is off in this browser - turn it back on":"Don't count my visits"}
+if(d.readyState==="loading")d.addEventListener("DOMContentLoaded",init);else init();
+/* load the counter only when configured, on the live hostnames, and not opted out / Do Not Track */
+if(/^[a-z0-9][a-z0-9-]{1,40}$/.test(TL_GC)&&TL_HOSTS.indexOf(","+location.hostname+",")>-1&&!off()){
+w.goatcounter={no_onload:true,no_events:true};
+var s=d.createElement("script");s.async=true;s.src=TL_SRC;s.setAttribute("data-goatcounter","https://"+TL_GC+".goatcounter.com/count");
+s.onload=function(){try{var g=w.goatcounter,og=g.get_data;
+g.get_data=function(v){var x=og(v);if(v&&v.event){x.r="";x.q=""}else{x.p=location.host+location.pathname;x.r=ref();x.t=d.title;x.q=utm()}return x};
+w.tlLoaded=1;g.count();flush()}catch(e){}};
+d.head.appendChild(s)}
+})();
+</script>
+</body></html>
