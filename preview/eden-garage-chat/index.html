@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Eden Garage – chat assistant demo (unofficial)</title><meta name="description" content="Unofficial chat assistant demo prepared by Tidy Ledger Studio from Eden Garage's own website. Not affiliated.">
+<meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#1f5f8b">
+<link rel="stylesheet" href="../../assets/demo.css"><link rel="stylesheet" href="../../assets/chatbot.css">
+<style>:root{--bg:#ffffff;--ink:#16202b;--muted:#566273;--line:#e2e7ee;--accent:#1f5f8b;--accent-text:#ffffff;--alt-bg:#f4f6f9;
+--font-head:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--hero-bg:linear-gradient(180deg,#eef2f6 0%,#ffffff 100%);--eyebrow:#1f5f8b;--strip-bg:#16202b;--band-bg:#16202b;--radius:14px;--price:#1f5f8b;--foot-bg:#10161e}
+.qgrid{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.qgrid .btn{white-space:normal;text-align:left}.demo-flag{display:inline-block;background:#fff3cd;color:#5c4400;border:1px solid #f0d58a;border-radius:8px;padding:8px 12px;font-size:15px;margin:10px 0 0}</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>Demo only</strong> – an unofficial chat assistant demo prepared for Eden Garage by Tidy Ledger Studio. Not the business's official website; not affiliated.</div>
+<main id="main">
+<section class="hero" id="top"><div class="wrap"><div>
+<span class="eyebrow">Garage &amp; motorsport · Darlington</span><h1>A chat assistant for Eden Garage – try it.</h1>
+<p class="lead">This demo answers common customer questions using only what Eden Garage's own website already says, and shows how an enquiry would reach you when you can't pick up the phone.</p>
+<p class="demo-flag"><strong>Demo – answers would be confirmed with you</strong> before anything went live. Nothing you type here is sent anywhere.</p>
+<div class="ctas"><button class="btn" type="button" data-chat-ask="Are you open now?">Open the chat</button><button class="btn ghost" type="button" data-chat-book="">Request a booking</button></div>
+</div></div></section>
+<section class="block" id="questions"><div class="wrap"><div class="sec-head"><h2>Questions it can answer</h2><p>Tap one – the assistant opens and answers. Every answer comes from your current website (https://www.eden-garage.com/ and /our-services (read 7 Oct 2026)).</p></div>
+<div class="qgrid"><button class="btn sm ghost" type="button" data-chat-ask="When are you open?">When are you open?</button><button class="btn sm ghost" type="button" data-chat-ask="Where are you?">Where are you?</button><button class="btn sm ghost" type="button" data-chat-ask="Do you do MOTs?">Do you do MOTs?</button><button class="btn sm ghost" type="button" data-chat-ask="Do you do track day preparation?">Do you do track day preparation?</button><button class="btn sm ghost" type="button" data-chat-ask="Can you do my car&#x27;s aircon?">Can you do my car&#x27;s aircon?</button><button class="btn sm ghost" type="button" data-chat-ask="Can I book outside opening hours?">Can I book outside opening hours?</button><button class="btn sm ghost" type="button" data-chat-ask="Tell me about mots">Tell me about mots</button><button class="btn sm ghost" type="button" data-chat-ask="Tell me about servicing">Tell me about servicing</button><button class="btn sm ghost" type="button" data-chat-ask="Tell me about aircon servicing">Tell me about aircon servicing</button></div></div></section>
+<section class="block alt"><div class="wrap two"><div class="panel"><h3>Opening hours (as the assistant knows them)</h3><table class="hours"><tbody data-tlc-hours><tr><td>Loading…</td></tr></tbody></table><p style="color:var(--muted);font-size:14px;margin:12px 0 0">Hours from your current website – to be confirmed.</p></div>
+<div class="panel"><h3>How it would work on your site</h3><ul class="ticks"><li>A small chat button on every page of your existing website – no new website needed.</li><li>Answers written with you and checked by you before going live.</li><li>Enquiries left in the chat go straight to your inbox.</li><li>One-off £49, no monthly fees. Removed any time.</li></ul></div>
+</div></section>
+<section class="block faq" id="faq"><div class="wrap"><div class="sec-head"><h2>The answers, in full</h2><p>Demo wording – would be confirmed with you.</p></div><div data-tlc-faqs></div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<p class="demo-note"><strong>Demo prepared for Eden Garage by Tidy Ledger Studio - not affiliated.</strong> Built only from the business's own public website (https://www.eden-garage.com/ and /our-services (read 7 Oct 2026)); details may be out of date. Nothing here is endorsed by the business. If you are the owner and would like this demo removed, reply to our email with "remove" and it will be taken down.</p>
+<p>No cookies. Visits are counted anonymously (GoatCounter, EU-hosted; no IP address stored). <a href="#" data-tl-optout role="button" tabindex="0">Don't count my visits</a></p>
+</div></footer>
+<script src="../../assets/chatbot.js"></script>
+<script>TLChat.init({
+ "business": "Eden Garage",
+ "botName": "Eden Garage assistant (demo)",
+ "demo": true,
+ "demoNote": "Demo only – nothing was sent. On your real assistant, requests like this would go straight to your inbox.",
+ "accent": "#1f5f8b",
+ "greeting": "Hi! This is a demo of a chat assistant for Eden Garage. Ask about MOTs, servicing, opening hours or track-day prep. (Demo – answers would be confirmed with you.)",
+ "suggestions": [
+  "Are you open now?",
+  "Do you do MOTs?",
+  "Do you do aircon?",
+  "Track day prep?"
+ ],
+ "hours": {
+  "mon": [
+   [
+    "09:00",
+    "17:00"
+   ]
+  ],
+  "tue": [
+   [
+    "09:00",
+    "17:00"
+   ]
+  ],
+  "wed": [
+   [
+    "09:00",
+    "17:00"
+   ]
+  ],
+  "thu": [
+   [
+    "09:00",
+    "17:00"
+   ]
+  ],
+  "fri": [
+   [
+    "09:00",
+    "17:00"
+   ]
+  ],
+  "sat": [],
+  "sun": []
+ },
+ "hoursNote": "Hours from your current website – to be confirmed.",
+ "pricesIntro": "Services (prices to be added with you):",
+ "pricesNote": "Prices would be added with you.",
+ "services": [
+  {
+   "name": "MOTs",
+   "price": "Price to add",
+   "keywords": [
+    "mot",
+    "m.o.t",
+    "test"
+   ],
+   "blurb": "MOT testing."
+  },
+  {
+   "name": "Servicing",
+   "price": "Price to add",
+   "keywords": [
+    "service",
+    "servicing",
+    "oil"
+   ],
+   "blurb": "Vehicle servicing."
+  },
+  {
+   "name": "Aircon servicing",
+   "price": "Price to add",
+   "keywords": [
+    "aircon",
+    "air con",
+    "air conditioning",
+    "regas"
+   ],
+   "blurb": "Air conditioning servicing."
+  },
+  {
+   "name": "Wheel alignment",
+   "price": "Price to add",
+   "keywords": [
+    "alignment",
+    "tracking",
+    "wheel alignment"
+   ],
+   "blurb": "Wheel alignment."
+  },
+  {
+   "name": "Welding, clutches & exhausts",
+   "price": "Price to add",
+   "keywords": [
+    "welding",
+    "clutch",
+    "clutches",
+    "exhaust",
+    "exhausts",
+    "repair"
+   ],
+   "blurb": "Repairs including welding, clutches and exhausts."
+  },
+  {
+   "name": "Track & motorsport prep",
+   "price": "Price to add",
+   "keywords": [
+    "track",
+    "trackday",
+    "track day",
+    "motorsport",
+    "geometry",
+    "corner weighting",
+    "camber",
+    "race"
+   ],
+   "blurb": "Geometry setup, corner weighting, pre-trackday inspection, trackside support, data analysis and driver training."
+  }
+ ],
+ "faqs": [
+  {
+   "q": "When are you open?",
+   "keywords": [
+    "open",
+    "hours",
+    "opening",
+    "close",
+    "weekend",
+    "saturday",
+    "sunday"
+   ],
+   "a": "Monday to Friday, 9:00–17:00. Closed Saturday and Sunday."
+  },
+  {
+   "q": "Where are you?",
+   "keywords": [
+    "where",
+    "address",
+    "find",
+    "location",
+    "dodsworth"
+   ],
+   "a": "Dodsworth Street, Darlington DL1 2NG.",
+   "onPage": false
+  },
+  {
+   "q": "Do you do MOTs?",
+   "keywords": [
+    "mot",
+    "m.o.t"
+   ],
+   "a": "Yes – MOTs, servicing and repairs. Leave your details with 'Request a booking' and the team would confirm a time."
+  },
+  {
+   "q": "Do you do track day preparation?",
+   "keywords": [
+    "track",
+    "trackday",
+    "track day",
+    "motorsport",
+    "race"
+   ],
+   "a": "Yes – Eden Garage Motorsport offers motorsport and track day preparation, parts and services: geometry setup (toe/camber/caster), corner weighting, pre-trackday inspection, trackside support, data analysis and driver training."
+  },
+  {
+   "q": "Can you do my car's aircon?",
+   "keywords": [
+    "aircon",
+    "air con",
+    "air conditioning"
+   ],
+   "a": "Yes – aircon servicing is on the services list."
+  },
+  {
+   "q": "Can I book outside opening hours?",
+   "keywords": [
+    "book",
+    "booking",
+    "evening",
+    "tonight",
+    "appointment"
+   ],
+   "a": "Yes – leave a booking request here any time and the garage would confirm it during opening hours."
+  }
+ ],
+ "locationText": "Dodsworth Street, Darlington DL1 2NG.",
+ "contactText": "On your real assistant this would show your phone number and email. The booking request here shows how it would reach you.",
+ "booking": {
+  "cta": "Request a booking",
+  "title": "Booking request (demo)",
+  "intro": "Here's how a booking request would reach you:",
+  "optionLabel": "Service",
+  "extraField": {
+   "label": "Car registration",
+   "type": "text",
+   "required": false
+  },
+  "timeOptions": [
+   "Any time",
+   "Morning",
+   "Afternoon"
+  ],
+  "notesLabel": "Anything else?",
+  "after": "On the real assistant, you'd get this by email."
+ },
+ "footNote": "Demo assistant: answers taken only from Eden Garage's own website – every answer would be confirmed with you before going live. No cookies."
+});</script>
+<script id="tl-analytics">
+/* Tidy Ledger UK anonymous visit counter (GoatCounter, EU-hosted). No cookies; nothing is stored in the visitor's browser unless THEY press "Don't count my visits". No IP is stored by us or by GoatCounter.
+   INERT until TL_GC is replaced by the real GoatCounter code (the part before .goatcounter.com). Blocking the counter changes nothing else on the page.
+   Counts: page views/visits, referrers, utm_source/utm_campaign, and events: tool_start, tool_complete (once per page view), payhip_click, cta_click.
+   Own visits: open any page with ?tl_ignore=1 (undo ?tl_ignore=0); same switch as GoatCounter's own #toggle-goatcounter (localStorage key "skipgc"). */
+(function(){
+var TL_GC="tidyledgeruk",
+TL_HOSTS=",mtd-2027-checker-uk.netlify.app,gpsr-checker-uk.netlify.app,rd-precheck-uk.netlify.app,card-fee-calculator-uk.netlify.app,phone-line-switch-off-uk.netlify.app,mtd-which-software-uk.netlify.app,tidy-ledger-guides-uk.netlify.app,catalinbirtum-lang.github.io,",
+TL_SRC="https://gc.zgo.at/count.js";
+var d=document,w=window,q=[],ls=null,st=0,cp=0,site=location.hostname.replace(/\.netlify\.app$/,"");
+try{ls=w.localStorage}catch(e){}
+function off(){try{return !!(ls&&ls.getItem("skipgc")==="t")||navigator.doNotTrack==="1"}catch(e){return false}}
+/* own-visit switch: sets one flag in THIS browser only, and only when the owner asks with the URL parameter */
+try{var m=/[?&]tl_ignore=([01])(&|$)/.exec(location.search);if(m&&ls){if(m[1]==="1")ls.setItem("skipgc","t");else ls.removeItem("skipgc")}}catch(e){}
+function ready(){return !!(w.goatcounter&&w.goatcounter.count&&w.tlLoaded)}
+function T(kind,extra){try{if(off())return;var n=kind+"|"+site+(extra?"|"+extra:"");if(ready())w.goatcounter.count({path:n,title:n,event:true,no_session:true});else if(q.length<20)q.push(n)}catch(e){}}
+function flush(){var a=q.splice(0);for(var i=0;i<a.length;i++){try{w.goatcounter.count({path:a[i],title:a[i],event:true,no_session:true})}catch(e){}}}
+/* privacy: send only host+path, a referrer without query text, and only utm_source/medium/campaign - never other query text or a hash */
+function utm(){var o=[],p=new URLSearchParams(location.search);["utm_source","utm_medium","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)o.push(k+"="+encodeURIComponent(v.slice(0,60)))});return o.length?"?"+o.join("&"):""}
+function ref(){var p=new URLSearchParams(location.search).get("utm_source");if(p)return p.slice(0,60);try{var r=new URL(d.referrer);return r.origin===location.origin?"":r.origin+r.pathname}catch(e){return ""}}
+/* clicks: Payhip links -> payhip_click|path; data-tl-cta or a.btn -> cta_click|id; data-tl-event="name" -> that event */
+d.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;
+var o=t.closest("[data-tl-optout]");if(o){e.preventDefault();try{if(ls){if(ls.getItem("skipgc")==="t")ls.removeItem("skipgc");else ls.setItem("skipgc","t")}}catch(x){}opt();return}
+var a=t.closest("a[href]"),c=t.closest("[data-tl-cta]"),ev=t.closest("[data-tl-event]"),h=null;
+if(a){try{h=new URL(a.href,location.href)}catch(x){}}
+if(h&&/(^|\.)payhip\.com$/i.test(h.hostname)){T("payhip_click",h.pathname.slice(0,40));return}
+if(ev){T(String(ev.getAttribute("data-tl-event")).slice(0,40));return}
+if(c||(a&&/(^|\s)btn(\s|$)/.test(a.className))){var id=(c&&c.getAttribute("data-tl-cta"))||(h?(h.hostname===location.hostname?"":h.hostname)+h.pathname:"cta");T("cta_click",String(id).slice(0,40))}
+},true);
+d.addEventListener("keydown",function(e){var t=e.target;if((e.key==="Enter"||e.key===" ")&&t&&t.hasAttribute&&t.hasAttribute("data-tl-optout")){e.preventDefault();t.click()}},true);
+/* tool_start = first change/input inside [data-tl-tool]; tool_complete = first time [data-tl-result] holds a result */
+function S(){if(!st){st=1;T("tool_start")}}
+function C(r){if(!cp&&r.textContent.replace(/\s+/g,"")){cp=1;S();T("tool_complete")}}
+function init(){var tool=d.querySelector("[data-tl-tool]"),res=d.querySelector("[data-tl-result]");
+if(tool){tool.addEventListener("input",S,true);tool.addEventListener("change",S,true);tool.addEventListener("submit",S,true)}
+if(res){C(res);if(w.MutationObserver)new MutationObserver(function(){C(res)}).observe(res,{childList:true,subtree:true,characterData:true})}
+opt()}
+function opt(){var l=d.querySelectorAll("[data-tl-optout]"),x=false;try{x=!!(ls&&ls.getItem("skipgc")==="t")}catch(e){}for(var i=0;i<l.length;i++)l[i].textContent=x?"Counting is off in this browser - turn it back on":"Don't count my visits"}
+if(d.readyState==="loading")d.addEventListener("DOMContentLoaded",init);else init();
+/* load the counter only when configured, on the live hostnames, and not opted out / Do Not Track */
+if(/^[a-z0-9][a-z0-9-]{1,40}$/.test(TL_GC)&&TL_HOSTS.indexOf(","+location.hostname+",")>-1&&!off()){
+w.goatcounter={no_onload:true,no_events:true};
+var s=d.createElement("script");s.async=true;s.src=TL_SRC;s.setAttribute("data-goatcounter","https://"+TL_GC+".goatcounter.com/count");
+s.onload=function(){try{var g=w.goatcounter,og=g.get_data;
+g.get_data=function(v){var x=og(v);if(v&&v.event){x.r="";x.q=""}else{x.p=location.host+location.pathname;x.r=ref();x.t=d.title;x.q=utm()}return x};
+w.tlLoaded=1;g.count();flush()}catch(e){}};
+d.head.appendChild(s)}
+})();
+</script>
+</body></html>
