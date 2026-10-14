@@ -112,7 +112,7 @@ var data={email:em,workbook_interest:wi.value,wants_help:help?'yes':'no',help_no
 consent_text:'I agree that Tidy Ledger Studio may store my email and answers and email me about this MTD checklist and workbook.',page:'mtd-2027',
 submitted_at:new Date().toISOString(),qa_test:qa?'yes':'no',_subject:(qa?'[~qatest] ':'')+'MTD 2027 signup ('+wi.value+(help?', wants help':'')+')',_template:'table',_captcha:'false'};
 var b=f.querySelector('button');b.disabled=true;
-fetch('https://formsubmit.co/ajax/tidyledgerstudiouk@gmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+fetch('https://formsubmit.co/ajax/09d7e468cd2b9bf410a81ce1e066859b',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
 .then(function(r){return r.json()}).then(function(j){if(j&&(j.success==='true'||j.success===true)){
 if(!qa&&window.tlTrack){window.tlTrack('mtd_signup','mtd2027');window.tlTrack('mtd_interest_'+wi.value,'mtd2027');if(help)window.tlTrack('mtd_service_enquiry','mtd2027')}
 m.textContent='Thanks! You are on the list. We will email you the checklist. Reply "unsubscribe" at any time.';f.reset()}
