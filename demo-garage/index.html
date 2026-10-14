@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Garage chat assistant demo – Tidy Ledger Studio</title><meta name="description" content="Try a website assistant for garages: MOT prices, opening hours, booking requests and out-of-hours enquiries. Works on fixed rules, not artificial intelligence.">
+<meta name="theme-color" content="#1f5f8b">
+<link rel="stylesheet" href="../assets/demo.css"><link rel="stylesheet" href="../assets/chatbot.css">
+<style>:root{--bg:#ffffff;--ink:#16202b;--muted:#566273;--line:#e2e7ee;--accent:#1f5f8b;--accent-text:#ffffff;--alt-bg:#f4f6f9;
+--font-head:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif;--font-body:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+--hero-bg:linear-gradient(180deg,#eef2f6 0%,#ffffff 100%);--eyebrow:#1f5f8b;--strip-bg:#16202b;--band-bg:#16202b;--radius:14px;--price:#1f5f8b;--foot-bg:#10161e}
+.qgrid{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.qgrid .btn{white-space:normal;text-align:left}.rules{display:inline-block;background:#e8f1f8;color:#123a55;border:1px solid #b9d3e6;border-radius:8px;padding:8px 12px;font-size:15px;margin:10px 0 0}</style></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="demo-bar"><strong>Demo site by Tidy Ledger Studio</strong> – "Example Motors" is an invented garage. <a href="../">Studio home</a></div>
+<main id="main">
+<section class="hero" id="top"><div class="wrap"><div>
+<span class="eyebrow">Garage website assistant · demo</span><h1>Answer MOT and booking questions while you're under a car.</h1>
+<p class="lead">A small chat button for your existing website. It answers MOT prices, opening hours and common questions, and when you're closed it takes the driver's name, contact, reg and what they need, and emails it to you.</p>
+<p class="rules" data-rules><strong>Works on fixed rules, not artificial intelligence.</strong> It only gives answers you've approved, and it never invents prices or promises a slot.</p>
+<div class="ctas"><button class="btn" type="button" data-chat-ask="How much is an MOT?">Open the chat</button><button class="btn ghost" type="button" data-chat-book="">Request a booking</button></div>
+<p><strong data-tlc-status></strong></p>
+</div></div></section>
+<section class="block" id="questions"><div class="wrap"><div class="sec-head"><h2>Try a question</h2><p>Tap one: the assistant opens and answers.</p></div><div class="qgrid"><button class="btn sm ghost" type="button" data-chat-ask="How much is an MOT?">How much is an MOT?</button><button class="btn sm ghost" type="button" data-chat-ask="How long does an MOT take?">How long does an MOT take?</button><button class="btn sm ghost" type="button" data-chat-ask="Can I book outside opening hours?">Can I book outside opening hours?</button><button class="btn sm ghost" type="button" data-chat-ask="Do you do Class 7 MOTs?">Do you do Class 7 MOTs?</button><button class="btn sm ghost" type="button" data-chat-ask="Can you look at my warning light?">Can you look at my warning light?</button><button class="btn sm ghost" type="button" data-chat-ask="Do you offer a courtesy car?">Do you offer a courtesy car?</button><button class="btn sm ghost" type="button" data-chat-ask="How do I pay?">How do I pay?</button><button class="btn sm ghost" type="button" data-chat-ask="Is this a chatbot using AI?">Is this a chatbot using AI?</button></div></div></section>
+<section class="block alt"><div class="wrap two">
+<div class="panel"><h3>Opening hours (sample)</h3><table class="hours"><tbody data-tlc-hours><tr><td>Loading…</td></tr></tbody></table></div>
+<div class="panel" id="terms"><h3>Price for your garage</h3><ul class="ticks">
+<li><strong>£49 one-off setup</strong>: your questions and answers, hours, prices and booking-request form, added to your existing website. Includes up to 3 changes in the first 30 days.</li>
+<li><strong>Optional £15/month</strong>: hosting, monthly check that it's working, up to 2 content updates a month, email support within 2 working days. Cancel any time, no minimum term.</li>
+<li>Pay by bank transfer only after you've approved your demo. No hidden fees.</li>
+<li>Works on fixed rules, not artificial intelligence: no AI, so no AI running costs.</li></ul></div>
+</div></section>
+<section class="block faq" id="faq"><div class="wrap"><div class="sec-head"><h2>All the answers in this demo</h2><p>Sample wording for an invented garage.</p></div><div data-tlc-faqs></div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<p class="demo-note"><strong>Demo site by Tidy Ledger Studio.</strong> Example Motors is an invented business; prices and hours are samples. Works on fixed rules, not artificial intelligence. Contact: <a href="mailto:tidyledgerstudiouk@gmail.com">tidyledgerstudiouk@gmail.com</a>.</p>
+<p>No cookies. Visits are counted anonymously (GoatCounter, EU-hosted; no IP address stored). <a href="#" data-tl-optout role="button" tabindex="0">Don't count my visits</a></p>
+</div></footer>
+<script src="../assets/chatbot.js"></script>
+<script>TLChat.init({
+ "business": "Example Motors",
+ "botName": "Garage assistant (demo)",
+ "demo": true,
+ "accent": "#1f5f8b",
+ "demoNote": "Demo only – nothing was sent. On your real assistant this request is emailed straight to your garage inbox.",
+ "greeting": "Hi! I'm the demo assistant for Example Motors, an invented garage. Ask about MOT prices, opening hours or booking – or leave a request if we're closed. (Works on fixed rules, not artificial intelligence: I only give answers the garage has approved.)",
+ "suggestions": [
+  "How much is an MOT?",
+  "Are you open now?",
+  "Book my car in",
+  "I need help out of hours"
+ ],
+ "hours": {
+  "mon": [
+   [
+    "08:30",
+    "17:30"
+   ]
+  ],
+  "tue": [
+   [
+    "08:30",
+    "17:30"
+   ]
+  ],
+  "wed": [
+   [
+    "08:30",
+    "17:30"
+   ]
+  ],
+  "thu": [
+   [
+    "08:30",
+    "17:30"
+   ]
+  ],
+  "fri": [
+   [
+    "08:30",
+    "17:30"
+   ]
+  ],
+  "sat": [
+   [
+    "09:00",
+    "12:00"
+   ]
+  ],
+  "sun": []
+ },
+ "hoursNote": "Sample hours for an invented garage.",
+ "pricesIntro": "Sample prices (invented garage):",
+ "pricesNote": "Your real prices go here – the assistant never makes up a price.",
+ "services": [
+  {
+   "name": "MOT (Class 4, cars & small vans)",
+   "price": "£54.85",
+   "keywords": [
+    "mot",
+    "m.o.t",
+    "mot price",
+    "mot cost",
+    "class 4",
+    "test"
+   ],
+   "blurb": "Sample price = the current DVSA maximum fee for a Class 4 MOT."
+  },
+  {
+   "name": "Interim service",
+   "price": "from £129",
+   "keywords": [
+    "interim",
+    "oil change",
+    "oil and filter"
+   ],
+   "blurb": "Sample price."
+  },
+  {
+   "name": "Full service",
+   "price": "from £219",
+   "keywords": [
+    "full service",
+    "service",
+    "servicing",
+    "annual service"
+   ],
+   "blurb": "Sample price."
+  },
+  {
+   "name": "Air con re-gas",
+   "price": "from £69",
+   "keywords": [
+    "air con",
+    "aircon",
+    "air conditioning",
+    "regas",
+    "re-gas"
+   ],
+   "blurb": "Sample price."
+  },
+  {
+   "name": "Diagnostics (warning light)",
+   "price": "from £45",
+   "keywords": [
+    "diagnostic",
+    "diagnostics",
+    "warning light",
+    "engine light",
+    "eml",
+    "fault code"
+   ],
+   "blurb": "Sample price."
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How much is an MOT?",
+   "keywords": [
+    "mot price",
+    "mot cost",
+    "how much mot",
+    "how much is an mot",
+    "price of mot"
+   ],
+   "a": "A Class 4 MOT (cars and small vans) is £54.85 in this demo – that's the DVSA maximum. Tap 'Request a booking' to pick a day."
+  },
+  {
+   "q": "How long does an MOT take?",
+   "keywords": [
+    "how long",
+    "wait",
+    "while i wait",
+    "take"
+   ],
+   "a": "Usually about an hour. You're welcome to wait, or drop the car off in the morning and collect it later."
+  },
+  {
+   "q": "Can I book outside opening hours?",
+   "keywords": [
+    "out of hours",
+    "evening",
+    "tonight",
+    "weekend",
+    "sunday",
+    "closed",
+    "after hours",
+    "help out of hours"
+   ],
+   "a": "Yes – leave a request here any time (name, phone or email, reg and what you need). It's emailed to the garage, who confirm on the next working day. For a breakdown or emergency, call your breakdown cover."
+  },
+  {
+   "q": "Do you do Class 7 MOTs?",
+   "keywords": [
+    "class 7",
+    "large van",
+    "transit",
+    "sprinter",
+    "3.5"
+   ],
+   "a": "Not at this demo garage – Class 4 only (cars and vans up to 3,000kg). Your real answer goes here."
+  },
+  {
+   "q": "Can you look at my warning light?",
+   "keywords": [
+    "warning light",
+    "engine light",
+    "dashboard",
+    "light on"
+   ],
+   "a": "Yes – diagnostics from £45 (sample price). Leave a booking request and mention the light."
+  },
+  {
+   "q": "Do you offer a courtesy car?",
+   "keywords": [
+    "courtesy",
+    "loan car",
+    "lift",
+    "drop off"
+   ],
+   "a": "No courtesy car at this demo garage, but drop-off from 8:30am is fine."
+  },
+  {
+   "q": "How do I pay?",
+   "keywords": [
+    "pay",
+    "payment",
+    "card",
+    "cash"
+   ],
+   "a": "Card or cash when you collect the car."
+  },
+  {
+   "q": "Is this a chatbot using AI?",
+   "keywords": [
+    "ai",
+    "artificial intelligence",
+    "chatgpt",
+    "robot",
+    "real person",
+    "human"
+   ],
+   "a": "Works on fixed rules, not artificial intelligence. It matches your question to answers the garage has written and approved. If it doesn't know, it says so and offers to pass your message on."
+  }
+ ],
+ "fallback": "Sorry, I don't have an approved answer for that. I can help with MOT prices, opening hours and bookings – or tap 'Request a booking' and the garage will reply.",
+ "locationText": "Example Motors is an invented demo garage – your address and a map link go here.",
+ "contactText": "On your real assistant this shows your phone number and email. Out of hours, the request form below emails you.",
+ "booking": {
+  "cta": "Request a booking",
+  "title": "Booking request (demo)",
+  "intro": "Leave your details – the garage confirms on the next working day:",
+  "optionLabel": "What do you need?",
+  "extraField": {
+   "label": "Car registration",
+   "type": "text",
+   "required": true
+  },
+  "timeOptions": [
+   "Any time",
+   "Morning drop-off",
+   "Afternoon"
+  ],
+  "notesLabel": "Anything else? (e.g. warning light)",
+  "after": "On the real assistant the garage gets this by email and replies on the next working day."
+ },
+ "footNote": "Demo assistant for an invented garage. Works on fixed rules, not artificial intelligence. No cookies."
+});</script>
+<script id="tl-analytics">
+/* Tidy Ledger UK anonymous visit counter (GoatCounter, EU-hosted). No cookies; nothing is stored in the visitor's browser unless THEY press "Don't count my visits". No IP is stored by us or by GoatCounter.
+   INERT until TL_GC is replaced by the real GoatCounter code (the part before .goatcounter.com). Blocking the counter changes nothing else on the page.
+   Counts: page views/visits, referrers, utm_source/utm_campaign, and events: tool_start, tool_complete (once per page view), payhip_click, cta_click.
+   Own visits: open any page with ?tl_ignore=1 (undo ?tl_ignore=0); same switch as GoatCounter's own #toggle-goatcounter (localStorage key "skipgc"). */
+(function(){
+var TL_GC="tidyledgeruk",
+TL_HOSTS=",mtd-2027-checker-uk.netlify.app,gpsr-checker-uk.netlify.app,rd-precheck-uk.netlify.app,card-fee-calculator-uk.netlify.app,phone-line-switch-off-uk.netlify.app,mtd-which-software-uk.netlify.app,tidy-ledger-guides-uk.netlify.app,catalinbirtum-lang.github.io,",
+TL_SRC="https://gc.zgo.at/count.js";
+var d=document,w=window,q=[],ls=null,st=0,cp=0,site=location.hostname.replace(/\.netlify\.app$/,"");
+try{ls=w.localStorage}catch(e){}
+function off(){try{return !!(ls&&ls.getItem("skipgc")==="t")||navigator.doNotTrack==="1"}catch(e){return false}}
+/* own-visit switch: sets one flag in THIS browser only, and only when the owner asks with the URL parameter */
+try{var m=/[?&]tl_ignore=([01])(&|$)/.exec(location.search);if(m&&ls){if(m[1]==="1")ls.setItem("skipgc","t");else ls.removeItem("skipgc")}}catch(e){}
+function ready(){return !!(w.goatcounter&&w.goatcounter.count&&w.tlLoaded)}
+function T(kind,extra){try{if(off())return;var n=kind+"|"+site+(extra?"|"+extra:"");if(ready())w.goatcounter.count({path:n,title:n,event:true,no_session:true});else if(q.length<20)q.push(n)}catch(e){}}
+function flush(){var a=q.splice(0);for(var i=0;i<a.length;i++){try{w.goatcounter.count({path:a[i],title:a[i],event:true,no_session:true})}catch(e){}}}
+/* privacy: send only host+path, a referrer without query text, and only utm_source/medium/campaign - never other query text or a hash */
+function utm(){var o=[],p=new URLSearchParams(location.search);["utm_source","utm_medium","utm_campaign"].forEach(function(k){var v=p.get(k);if(v)o.push(k+"="+encodeURIComponent(v.slice(0,60)))});return o.length?"?"+o.join("&"):""}
+function ref(){var p=new URLSearchParams(location.search).get("utm_source");if(p)return p.slice(0,60);try{var r=new URL(d.referrer);return r.origin===location.origin?"":r.origin+r.pathname}catch(e){return ""}}
+/* clicks: Payhip links -> payhip_click|path; data-tl-cta or a.btn -> cta_click|id; data-tl-event="name" -> that event */
+d.addEventListener("click",function(e){var t=e.target;if(!t||!t.closest)return;
+var o=t.closest("[data-tl-optout]");if(o){e.preventDefault();try{if(ls){if(ls.getItem("skipgc")==="t")ls.removeItem("skipgc");else ls.setItem("skipgc","t")}}catch(x){}opt();return}
+var a=t.closest("a[href]"),c=t.closest("[data-tl-cta]"),ev=t.closest("[data-tl-event]"),h=null;
+if(a){try{h=new URL(a.href,location.href)}catch(x){}}
+if(h&&/(^|\.)payhip\.com$/i.test(h.hostname)){T("payhip_click",h.pathname.slice(0,40));return}
+if(ev){T(String(ev.getAttribute("data-tl-event")).slice(0,40));return}
+if(c||(a&&/(^|\s)btn(\s|$)/.test(a.className))){var id=(c&&c.getAttribute("data-tl-cta"))||(h?(h.hostname===location.hostname?"":h.hostname)+h.pathname:"cta");T("cta_click",String(id).slice(0,40))}
+},true);
+d.addEventListener("keydown",function(e){var t=e.target;if((e.key==="Enter"||e.key===" ")&&t&&t.hasAttribute&&t.hasAttribute("data-tl-optout")){e.preventDefault();t.click()}},true);
+/* tool_start = first change/input inside [data-tl-tool]; tool_complete = first time [data-tl-result] holds a result */
+function S(){if(!st){st=1;T("tool_start")}}
+function C(r){if(!cp&&r.textContent.replace(/\s+/g,"")){cp=1;S();T("tool_complete")}}
+function init(){var tool=d.querySelector("[data-tl-tool]"),res=d.querySelector("[data-tl-result]");
+if(tool){tool.addEventListener("input",S,true);tool.addEventListener("change",S,true);tool.addEventListener("submit",S,true)}
+if(res){C(res);if(w.MutationObserver)new MutationObserver(function(){C(res)}).observe(res,{childList:true,subtree:true,characterData:true})}
+opt()}
+function opt(){var l=d.querySelectorAll("[data-tl-optout]"),x=false;try{x=!!(ls&&ls.getItem("skipgc")==="t")}catch(e){}for(var i=0;i<l.length;i++)l[i].textContent=x?"Counting is off in this browser - turn it back on":"Don't count my visits"}
+if(d.readyState==="loading")d.addEventListener("DOMContentLoaded",init);else init();
+/* load the counter only when configured, on the live hostnames, and not opted out / Do Not Track */
+if(/^[a-z0-9][a-z0-9-]{1,40}$/.test(TL_GC)&&TL_HOSTS.indexOf(","+location.hostname+",")>-1&&!off()){
+w.goatcounter={no_onload:true,no_events:true};
+var s=d.createElement("script");s.async=true;s.src=TL_SRC;s.setAttribute("data-goatcounter","https://"+TL_GC+".goatcounter.com/count");
+s.onload=function(){try{var g=w.goatcounter,og=g.get_data;
+g.get_data=function(v){var x=og(v);if(v&&v.event){x.r="";x.q=""}else{x.p=location.host+location.pathname;x.r=ref();x.t=d.title;x.q=utm()}return x};
+w.tlLoaded=1;g.count();flush()}catch(e){}};
+d.head.appendChild(s)}
+})();
+</script>
+</body></html>
