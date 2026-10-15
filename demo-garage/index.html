@@ -34,12 +34,12 @@
 <p>No cookies. Visits are counted anonymously (GoatCounter, EU-hosted; no IP address stored). <a href="#" data-tl-optout role="button" tabindex="0">Don't count my visits</a></p>
 </div></footer>
 <script src="../assets/chatbot.js"></script>
-<script>TLChat.init({
+<script>(function(){var cfg={
  "business": "Example Motors",
  "botName": "Garage assistant (demo)",
  "demo": true,
  "accent": "#1f5f8b",
- "demoNote": "Demo only – nothing was sent. On your real assistant this request is emailed straight to your garage inbox.",
+ "demoNote": "Demo: this request is being emailed to the Tidy Ledger Studio inbox to show delivery working. On your real assistant it is emailed to your garage inbox instead.",
  "greeting": "Hi! I'm the demo assistant for Example Motors, an invented garage. Ask about MOT prices, opening hours or booking – or leave a request if we're closed. (Works on fixed rules, not artificial intelligence: I only give answers the garage has approved.)",
  "suggestions": [
   "How much is an MOT?",
@@ -260,10 +260,19 @@
    "Afternoon"
   ],
   "notesLabel": "Anything else? (e.g. warning light)",
-  "after": "On the real assistant the garage gets this by email and replies on the next working day."
+  "after": "On the real assistant the garage gets this by email and replies on the next working day.",
+  "privacy": "Demo form: please use test details only. What you enter is emailed to Tidy Ledger Studio (via FormSubmit) to show delivery, and deleted after checking."
  },
  "footNote": "Demo assistant for an invented garage. Works on fixed rules, not artificial intelligence. No cookies."
-});</script>
+};
+cfg.booking.onSubmit=function(data,lines){var qa=/qatest/i.test(data.name||"")||/qatest/i.test(location.search);
+var log=document.querySelector(".tlc-log");function note(t){if(!log)return;var d=document.createElement("div");d.className="tlc-msg tlc-bot";d.setAttribute("data-delivery","1");d.textContent=t;log.appendChild(d);log.scrollTop=log.scrollHeight}
+var body={_subject:(qa?"[~qatest] ":"")+"Garage demo booking request – "+(data.name||""),_template:"table",_captcha:"false",page:"demo-garage",qa_test:qa?"yes":"no",submitted_at:new Date().toISOString()};
+for(var k in data){if(data.hasOwnProperty(k))body[k]=data[k]}
+fetch("https://formsubmit.co/ajax/09d7e468cd2b9bf410a81ce1e066859b",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(body)})
+.then(function(r){return r.json()}).then(function(j){note(j&&(j.success==="true"||j.success===true)?"Delivered: this request has been emailed to the inbox.":"Sorry, the request did not send. Please email tidyledgerstudiouk@gmail.com.")})
+.catch(function(){note("Sorry, the request did not send. Please email tidyledgerstudiouk@gmail.com.")})};
+TLChat.init(cfg)})();</script>
 <script id="tl-analytics">
 /* Tidy Ledger UK anonymous visit counter (GoatCounter, EU-hosted). No cookies; nothing is stored in the visitor's browser unless THEY press "Don't count my visits". No IP is stored by us or by GoatCounter.
    INERT until TL_GC is replaced by the real GoatCounter code (the part before .goatcounter.com). Blocking the counter changes nothing else on the page.
