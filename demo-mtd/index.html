@@ -1,0 +1,66 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>TaxReady Trades (demo) – Making Tax Digital setup &amp; training</title>
+<style>
+:root{--navy:#0f2747;--navy2:#173a66;--green:#18a058;--lg:#e8f6ee;--bg:#f5f7fb;--tx:#1d2733}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--tx);background:var(--bg);line-height:1.55}
+.demo{background:#ffd54a;color:#3a2e00;text-align:center;font-size:.85rem;padding:.4rem;font-weight:600}
+header{background:linear-gradient(135deg,var(--navy),var(--navy2));color:#fff;padding:2.5rem 1.2rem 3rem}
+.w{max-width:960px;margin:0 auto}.logo{font-weight:800;font-size:1.2rem}.logo span{color:#5be39a}
+h1{font-size:1.8rem;line-height:1.2;margin:1.4rem 0 .8rem}h2{color:var(--navy);font-size:1.5rem;margin:0 0 1rem}
+.disc{display:inline-block;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.3);padding:.4rem .7rem;border-radius:8px;font-size:.9rem}
+.btn{display:inline-block;background:var(--green);color:#fff;border:0;padding:.8rem 1.3rem;border-radius:10px;font-weight:700;text-decoration:none;font-size:1rem;cursor:pointer;margin-top:1.2rem}
+section{padding:2.5rem 1.2rem}.card{background:#fff;border-radius:14px;padding:1.3rem;box-shadow:0 2px 10px rgba(15,39,71,.07)}
+.grid{display:grid;gap:1rem}@media(min-width:720px){.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}h1{font-size:2.5rem}}
+input,textarea{width:100%;padding:.7rem;border:1px solid #c9d3e0;border-radius:8px;font:inherit;margin:.3rem 0 .8rem}
+label{font-weight:600;font-size:.92rem}#res{margin-top:.6rem;padding:1rem;border-radius:10px;display:none;font-weight:600}
+ol{padding-left:1.2rem}li{margin:.4rem 0}.tag{font-size:.75rem;font-weight:700;padding:.15rem .5rem;border-radius:20px;background:var(--lg);color:#0d6b3a}
+.you{background:#e6edf7;color:var(--navy)}.tl{border-left:4px solid var(--green);padding-left:.8rem}.tl b{color:var(--navy);font-size:1.2rem}
+.dash{background:var(--navy);color:#fff}.dash .k{font-size:1.5rem;font-weight:800;color:#5be39a}.ex{background:#ffd54a;color:#3a2e00;font-size:.75rem;font-weight:700;padding:.15rem .5rem;border-radius:6px}
+.price{font-size:2rem;font-weight:800;color:var(--navy)}small{color:#5a6675}footer{background:var(--navy);color:#cdd6e3;padding:1.5rem 1.2rem;font-size:.85rem}a{color:var(--green)}
+</style></head><body>
+<div class="demo">DEMO SITE – working name, not a live service. Demo site by Tidy Ledger Studio.</div>
+<header><div class="w"><div class="logo">TaxReady <span>Trades</span></div>
+<h1>Making Tax Digital starts for many sole traders and landlords from April 2027. We help you get set up.</h1>
+<p>Plain-English setup and training so you can keep digital records and send quarterly updates yourself.</p>
+<div class="disc">Not affiliated with HMRC. Not tax advice.</div><br><a class="btn" href="#check">Am I in MTD? Check now</a></div></header>
+
+<section id="check"><div class="w card"><h2>Am I in MTD?</h2>
+<p>Enter your total <b>gross</b> (before expenses) yearly income from self-employment plus property.</p>
+<label for="inc">Qualifying income (£)</label><input id="inc" type="number" min="0" inputmode="numeric" placeholder="e.g. 38000">
+<button class="btn" style="margin-top:0" onclick="chk()">Check</button><div id="res"></div>
+<p><small>Based on GOV.UK thresholds (income over £50,000: from 6 April 2026; over £30,000: from 6 April 2027; over £20,000: from 6 April 2028), using your income for the relevant earlier tax year. Source: <a href="https://www.gov.uk/guidance/check-if-youre-eligible-for-making-tax-digital-for-income-tax" target="_blank" rel="noopener">GOV.UK – Check if you need to use Making Tax Digital for Income Tax</a>. Always confirm on GOV.UK.</small></p></div></section>
+
+<section style="background:#fff"><div class="w"><h2>How it works</h2><div class="grid g2">
+<div class="card"><span class="tag you">YOU DO (your own logins)</span><ol><li>Create or find your Government Gateway login</li><li>Sign up for Making Tax Digital for Income Tax on GOV.UK</li><li>Connect your software to HMRC with your own login</li><li>Send quarterly updates and submit your tax return using your software</li></ol></div>
+<div class="card"><span class="tag">WE HELP</span><ol><li>Choose MTD-compatible software that fits you</li><li>Set-up walkthrough: categories, receipts, settings</li><li>Guidance to link your bank feed</li><li>1-to-1 training so you're confident</li><li>Deadline reminders every quarter</li></ol></div></div>
+<p><small>We never ask for your passwords or tax reference, and we do not access or prepare your records.</small></p></div></section>
+
+<section><div class="w"><h2>Quarterly update deadlines</h2><div class="grid g4">
+<div class="card tl"><b>7 August</b><br>Quarter 6 Apr – 5 Jul</div><div class="card tl"><b>7 November</b><br>Quarter 6 Jul – 5 Oct</div>
+<div class="card tl"><b>7 February</b><br>Quarter 6 Oct – 5 Jan</div><div class="card tl"><b>7 May</b><br>Quarter 6 Jan – 5 Apr</div></div>
+<p><small>Then submit your tax return using your software by 31 January after the tax year ends.</small></p></div></section>
+
+<section style="background:#fff"><div class="w"><h2>What your quarter looks like</h2><div class="card dash">
+<span class="ex">Example data</span><div class="grid g4" style="margin-top:1rem">
+<div><small style="color:#cdd6e3">Q3 income</small><div class="k">£8,420</div></div><div><small style="color:#cdd6e3">Q3 expenses</small><div class="k">£2,150</div></div>
+<div><small style="color:#cdd6e3">Next deadline</small><div class="k">7 Feb</div></div><div><small style="color:#cdd6e3">Receipts sorted</small><div class="k">46 / 48</div></div></div>
+<p style="margin:.8rem 0 0"><small style="color:#cdd6e3">Illustration only – figures are made up.</small></p></div></div></section>
+
+<section id="pricing"><div class="w"><h2>Pricing <span class="ex">DEMO</span></h2><div class="grid g2">
+<div class="card"><h3>Setup &amp; training session</h3><div class="price">£79</div><small>one-off</small><ul><li>Software choice</li><li>Guided setup &amp; bank link guidance</li><li>Training session</li></ul></div>
+<div class="card"><h3>Reminder plan</h3><div class="price">£9<small>/month</small></div><ul><li>Quarterly deadline reminders</li><li>Step-by-step guides</li><li>We do not access or prepare your records</li></ul></div></div></div></section>
+
+<section style="background:#fff" id="enquire"><div class="w card"><h2>Register interest <span class="ex">DEMO</span></h2>
+<form action="https://formsubmit.co/tidyledgerstudiouk@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="TaxReady Trades demo enquiry"><input type="hidden" name="_captcha" value="true"><input type="text" name="_honey" style="display:none">
+<label>Name</label><input name="name" required><label>Email</label><input type="email" name="email" required>
+<label>Sole trader, landlord or both?</label><input name="type"><label>Message</label><textarea name="message" rows="3"></textarea>
+<label style="font-weight:400"><input type="checkbox" name="consent" value="yes" required style="width:auto"> I agree to be contacted about this enquiry.</label>
+<p><small>Privacy: we only use your details to reply to this enquiry and don't share them. Form delivered via FormSubmit. Ask us anytime to delete your data.</small></p>
+<button class="btn" type="submit">Send enquiry</button></form></div></section>
+<footer><div class="w">TaxReady Trades is a working name – demo page only. Not affiliated with HMRC. Not tax advice. Demo site by Tidy Ledger Studio · <a href="mailto:tidyledgerstudiouk@gmail.com">tidyledgerstudiouk@gmail.com</a></div></footer>
+<script>function chk(){var v=parseFloat(document.getElementById('inc').value),r=document.getElementById('res'),t,c;
+if(isNaN(v)||v<0){t='Please enter an amount.';c='#fdecec'}else if(v>50000){t='You need to use MTD from 6 April 2026.';c='#fdecec'}
+else if(v>30000){t='You need to use MTD from 6 April 2027. Time to get set up.';c='#fff4d6'}else if(v>20000){t='You need to use MTD from 6 April 2028.';c='#e6edf7'}
+else{t='Not yet – income of £20,000 or less is not currently required to join.';c='#e8f6ee'}r.style.display='block';r.style.background=c;r.textContent=t}</script>
+</body></html>
